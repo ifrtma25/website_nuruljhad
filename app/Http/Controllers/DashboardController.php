@@ -8,11 +8,16 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('component.frontend.dashboard');
+        return view('component.landpage.dashboard');
     }
 
     public function about()
     {
-        return view('component.frontend.about');
+        return view('component.landpage.about');
+    }
+
+    public function contact()
+    {
+        return view('component.landpage.contact');
     }
 }

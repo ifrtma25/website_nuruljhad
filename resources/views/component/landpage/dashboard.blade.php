@@ -1,129 +1,21 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Joson</title>
-
-    @include('includes.css')
-    <!-- bootstrap core css -->
-
-</head>
-
-<body>
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section fixed-top bg-dark">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="index.html">
-                        <h3>
-                            Joson
-                        </h3>
-                        <span> college</span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-                        <ul class="navbar-nav  ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="course.html"> Courses </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="event.html"> Events </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html">Login</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <!-- end header section -->
-        <!-- slider section -->
-        <section class=" slider_section position-relative">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="detail-box">
-                                        <div>
-                                            <h1>
-                                                E D U C A T I O N
-                                            </h1>
-                                            <a href="">
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="detail-box">
-                                        <div>
-                                            <h1>
-                                                E D U C A T I O N
-                                            </h1>
-                                            <a href="">
-                                                Read More
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="detail-box">
-                                        <div>
-                                            <h1>
-                                                E D U C A T I O N
-                                            </h1>
-                                            <a href="">
-                                                Read More
-                                            </a>
-                                        </div>
+@extends('layout.app')
+@section('title', 'Beranda')
+@section('topic')
+    <section class=" slider_section position-relative">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item {{ Request::is('/') ? 'active' : '' }}">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="detail-box">
+                                    <div>
+                                        <h1>
+                                            Welcome <br> TO <br>Ikramnurjihad
+                                        </h1>
+                                        {{-- <a href="">
+                                        Read More
+                                    </a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -131,12 +23,10 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- end slider section -->
-    </div>
-
-    <!-- special section -->
-
+        </div>
+    </section>
+@endsection
+@section('content')
     <section class="special_section">
         <div class="container">
             <div class="special_container">
@@ -191,17 +81,17 @@
     <!-- about section -->
     <section class="about_section layout_padding">
         <div class="side_img">
-            <img src="images/side-img.png" alt="" />
+            <img src="images/side-img.png" alt="">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="img_container">
                         <div class="img-box b1">
-                            <img src="images/a-1.jpg" alt="" />
+                            <img src="{{ asset('assets/images/IMG_5702.JPG') }}" alt="" />
                         </div>
                         <div class="img-box b2">
-                            <img src="images/a-2.jpg" alt="" />
+                            <img src="{{ asset('assets/images/IMG_5775.JPG') }}" alt="" />
                         </div>
                     </div>
                 </div>
@@ -232,7 +122,7 @@
 
     <section class="course_section layout_padding-bottom">
         <div class="side_img">
-            <img src="images/side-img.png" alt="" />
+            <img src="{{ asset('assets/images/side-img.png') }}" alt="" />
         </div>
         <div class="container">
             <div class="heading_container">
@@ -246,9 +136,9 @@
             <div class="course_container">
                 <div class="course_content">
                     <div class="box">
-                        <img src="images/c-1.jpg" alt="" />
+                        <img src="{{ asset('assets/images/c-1.jpg') }}" alt="" />
                         <a href="" class="">
-                            <img src="images/link.png" alt="" />
+                            <img src="{{ asset('assets/images/link.png') }}" alt="" />
                         </a>
                         <h5>
                             LMS <br />
@@ -256,9 +146,9 @@
                         </h5>
                     </div>
                     <div class="box">
-                        <img src="images/c-2.jpg" alt="" />
+                        <img src="{{ asset('assets/images/c-2.jpg') }}" alt="" />
                         <a href="" class="">
-                            <img src="images/link.png" alt="" />
+                            <img src="{{ asset('assets/images/link.png') }}" alt="" />
                         </a>
                         <h5>
                             From <br />
@@ -268,19 +158,19 @@
                 </div>
                 <div class="course_content">
                     <div class="box">
-                        <img src="images/c-3.jpg" alt="" />
+                        <img src="{{ asset('assets/images/c-3.jpg') }}" alt="" />
                         <a href="" class="">
-                            <img src="images/link.png" alt="" />
+                            <img src="{{ asset('assets/images/link.png') }}" alt="" />
                         </a>
                         <h5>
                             Learn <br />
-                            Python – Interactive
+                            Python - Interactive
                         </h5>
                     </div>
                     <div class="box">
-                        <img src="images/c-4.jpg" alt="" />
+                        <img src="{{ asset('assets/images/c-4.jpg') }}" alt="" />
                         <a href="" class="">
-                            <img src="images/link.png" alt="" />
+                            <img src="{{ asset('assets/images/link.png') }}" alt="" />
                         </a>
                         <h5>
                             Your <br />
@@ -288,9 +178,9 @@
                         </h5>
                     </div>
                     <div class="box">
-                        <img src="images/c-5.jpg" alt="" />
+                        <img src="{{ asset('assets/images/c-5.jpg') }}" alt="" />
                         <a href="" class="">
-                            <img src="images/link.png" alt="" />
+                            <img src="{{ asset('assets/images/link.png') }}" alt="" />
                         </a>
                         <h5>
                             Photography
@@ -363,7 +253,7 @@
             <div class="event_container">
                 <div class="box">
                     <div class="img-box">
-                        <img src="images/event-img.jpg" alt="" />
+                        <img src="{{ asset('assets/images/event-img.jpg') }}" alt="" />
                     </div>
                     <div class="detail-box">
                         <h4>
@@ -384,7 +274,7 @@
                 </div>
                 <div class="box">
                     <div class="img-box">
-                        <img src="images/event-img.jpg" alt="" />
+                        <img src="{{ asset('assets/images/event-img.jpg') }}" alt="" />
                     </div>
                     <div class="detail-box">
                         <h4>
@@ -431,7 +321,7 @@
                     <div class="carousel-item active">
                         <div class="box">
                             <div class="img-box">
-                                <img src="images/client.png" alt="" />
+                                <img src="{{ asset('assets/images/client.png') }}" alt="" />
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -449,7 +339,7 @@
                     <div class="carousel-item">
                         <div class="box">
                             <div class="img-box">
-                                <img src="images/client.png" alt="" />
+                                <img src="{{ asset('assets/images/client.png') }}" alt="" />
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -467,7 +357,7 @@
                     <div class="carousel-item">
                         <div class="box">
                             <div class="img-box">
-                                <img src="images/client.png" alt="" />
+                                <img src="{{ asset('assets/images/client.png') }}" alt="" />
                             </div>
                             <div class="detail-box">
                                 <h5>
@@ -544,107 +434,5 @@
             </div>
         </div>
     </section>
-
     <!-- end contact section -->
-
-    <!-- info section -->
-    <section class="info_section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info_menu">
-                        <h5>
-                            QUICK LINKS
-                        </h5>
-                        <ul class="navbar-nav  ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="course.html"> Courses </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="event.html"> Events </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html">Login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info_course">
-                        <h5>
-                            TOP RATED COURSE
-                        </h5>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available,
-                            but the majority have suffered alteration in some form, by
-                            injected humou
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-5 offset-md-1">
-                    <div class="info_news">
-                        <h5>
-                            FOR ANY QUERY, PLEASE WRITE TO US
-                        </h5>
-                        <div class="info_contact">
-                            <a href="">
-                                Location
-                            </a>
-                            <a href="">
-                                demo@gmail.com
-                            </a>
-                            <a href="">
-                                Call : +01 1234567890
-                            </a>
-                        </div>
-                        <form action="">
-                            <input type="text" placeholder="Enter Your email" />
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end info section -->
-
-    <!-- footer section -->
-    <footer class="container-fluid footer_section">
-        <p>
-            &copy; 2021 All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a>
-        </p>
-
-    </footer>
-
-
-    <footer class="container-fluid footer_section">
-
-        <p>
-            Distributed By
-            <a href="https://themewagon.com/">Themewagon</a>
-        </p>
-
-    </footer>
-
-    <!-- footer section -->
-
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-
-</body>
-
-</html>
+@endsection

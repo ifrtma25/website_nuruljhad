@@ -1,3 +1,5 @@
+<link rel="icon" href="{{ asset('assets/images/Ikramnur.Jihad.png') }}">
+
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }}" />
 <!-- fonts style -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap"
