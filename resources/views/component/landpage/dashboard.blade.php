@@ -1,4 +1,4 @@
-@extends('layout.landpage')
+@extends('layout.landPage')
 @section('title', 'Beranda')
 @section('content')
     <div class="owl-carousel-wrapper">

@@ -1,4 +1,4 @@
-@extends('layout.landpage')
+@extends('layout.landPage')
 @section('title', 'Masjid Nurul Jihad')
 @section('header')
     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">

@@ -1,4 +1,4 @@
-@extends('layout.landpage')
+@extends('layout.landPage')
 @section('title', 'Rumah Tahfidz')
 @section('header')
     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">

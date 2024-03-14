@@ -9,6 +9,6 @@ class NurulJihadController extends Controller
 {
     public function index()
     {
-        return view('component.landpage.nuruljihad.index');
+        return view('component.landPage.nuruljihad.index');
     }
 }

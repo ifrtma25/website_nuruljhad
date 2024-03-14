@@ -9,6 +9,6 @@ class DashboardController extends Controller
 {
     public function dashboard_landpage()
     {
-        return view('component.landpage.dashboard');
+        return view('component.landPage.dashboard');
     }
 }

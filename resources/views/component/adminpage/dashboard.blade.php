@@ -1,6 +1,15 @@
-@extends('layout.adminpage')
+@extends('layout.adminPage')
 @section('title', 'Dashboard Admin')
 @section('content')
+    @if (session('status'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                text: "{{ session('status') }}"
+            });
+        </script>
+    @endif
     <div class="container-fluid">
 
         <!-- Page Heading -->
