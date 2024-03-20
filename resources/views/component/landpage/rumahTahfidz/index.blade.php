@@ -7,14 +7,14 @@
             <div class="row align-items-center position-relative">
 
                 <div>
-                    <a href="{{ route('index.rumah_tahfidz') }}" class="text-white">
+                    <a href="{{ route('rumah_tahfidz.index') }}" class="text-white">
                         <h2 class="text-white">Rumah Tahfidz</h2>
                     </a>
                 </div>
 
                 <nav class="site-navigation text-left ml-auto " role="navigation">
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="{{ route('index.rumah_tahfidz') }}" class="nav-link">Beranda</a></li>
+                        <li><a href="{{ route('rumah_tahfidz.index') }}" class="nav-link">Beranda</a></li>
                         <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
                         <li><a href="causes.html" class="nav-link">Daftar Santri</a></li>
                         <li><a href="blog.html" class="nav-link">Informasi</a></li>

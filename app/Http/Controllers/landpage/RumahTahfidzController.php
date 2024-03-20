@@ -9,6 +9,6 @@ class RumahTahfidzController extends Controller
 {
     public function index()
     {
-        return view('component.landPage.rumah_tahfidz.index');
+        return view('component.landPage.rumahTahfidz.index');
     }
 }

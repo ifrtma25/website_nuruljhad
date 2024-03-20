@@ -22,25 +22,48 @@
     <hr class="sidebar-divider">
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item {{ Request::is('nuruljihad') ? 'active' : '' }}">
-        <a class="nav-link" href="{{-- route('nuruljihad') --}}">
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-mosque"></i>
             <span>Masjid Nurul Jihad</span>
         </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="buttons.html">Kajian</a>
+                <a class="collapse-item" href="cards.html">Program</a>
+            </div>
+        </div>
     </li>
 
-    <li class="nav-item {{ Request::is('kajian') ? 'active' : '' }}">
-        <a class="nav-link" href="{{-- route('index_kajian') --}}">
-            <i class="fas fa-fw fa-book"></i>
-            <span>Raudhatul Athfal</span>
-        </a>
-    </li>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-fw fa-users"></i>
             <span>Rumah Tahfidz</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('kajian') ? 'active' : '' }}">
+        <a class="nav-link" href="{{-- route('index_kajian') --}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>RA Darul Istiqamah</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('kajian') ? 'active' : '' }}">
+        <a class="nav-link" href="{{-- route('index_kajian') --}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>TPA Darul Istiqamah</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('kajian') ? 'active' : '' }}">
+        <a class="nav-link" href="{{-- route('index_kajian') --}}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Majelis Taklim</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('kajian') ? 'active' : '' }}">
+        <a class="nav-link" href="{{-- route('index_kajian') --}}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>IkramnuJihad</span>
         </a>
     </li>
 

@@ -9,6 +9,6 @@ class RaudhatulAthfalController extends Controller
 {
     public function index()
     {
-        return view('component.landPage.raudhatul_athfal.index');
+        return view('component.landPage.raudhatulAthfal.index');
     }
 }

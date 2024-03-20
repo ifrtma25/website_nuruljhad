@@ -1,5 +1,5 @@
 @extends('layout.landPage')
-@section('title', 'Raudhatul Athfal')
+@section('title', 'Majelis Taklim')
 @section('header')
     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 
@@ -7,18 +7,17 @@
             <div class="row align-items-center position-relative">
 
                 <div>
-                    <a href="{{ route('index.raudhatul_athfal') }}" class="text-white">
-                        <h2 class="text-white">Raudhatul Athfal</h2>
+                    <a href="{{ route('majelis_taklim.index') }}" class="text-white">
+                        <h2 class="text-white">Majelis Taklim</h2>
                     </a>
                 </div>
 
                 <nav class="site-navigation text-left ml-auto " role="navigation">
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="{{ route('index.raudhatul_athfal') }}" class="nav-link">Dashboard</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li><a href="causes.html" class="nav-link">Our Causes</a></li>
-                        <li><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="{{ route('majelis_taklim.index') }}" class="nav-link">Beranda</a></li>
+                        <li><a href="{{-- route('majelis_taklim.kajian') --}}" class="nav-link">Kajian</a></li>
+                        <li><a href="blog.html" class="nav-link">Informasi</a></li>
+                        <li><a href="contact.html" class="nav-link">Kontak</a></li>
                     </ul>
                 </nav>
 
@@ -29,4 +28,8 @@
             </div>
         </div>
     </header>
+@endsection
+
+@section('content')
+
 @endsection
