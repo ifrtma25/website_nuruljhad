@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pesantren Darul Istiqamah | @yield('title')</title>
+    <title>Darul Istiqamah | @yield('title')</title>
 
     @include('includes.adminpage.css')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

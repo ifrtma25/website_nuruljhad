@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Pesantren Darul Istiqamah | @yield('title')</title>
+    <title>Darul Istiqamah | @yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,7 +15,6 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
     <div class="site-wrap" id="home-section">
-
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
                 <div class="site-mobile-menu-close mt-3">
@@ -30,10 +29,9 @@
         @yield('header')
 
         @yield('content')
-
     </div>
 
-    <footer class="site-footer bg-white">
+    <footer class="site-footer bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -83,7 +81,9 @@
                     </form>
                 </div>
             </div>
-            <div class="row pt-5 mt-5 text-center">
+        </div>
+        <div class="container-fluid">
+            <div class="row mt-5 text-center bg-secondary">
                 <div class="col-md-12">
                     <div class="pt-5">
                         <p>
@@ -94,7 +94,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>

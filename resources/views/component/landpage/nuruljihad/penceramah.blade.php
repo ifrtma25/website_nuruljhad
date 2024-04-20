@@ -1,5 +1,5 @@
 @extends('layout.landPage')
-@section('title', 'Struktur')
+@section('title', 'Penceramah')
 @section('header')
     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 

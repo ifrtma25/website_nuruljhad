@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\adminpage\DashboardController as AdminpageDashboardController;
+use App\Http\Controllers\adminPage\KajianController;
+use App\Http\Controllers\adminPage\StrukturController;
 use App\Http\Controllers\landpage\DashboardController;
 use App\Http\Controllers\landPage\IkramnurjihadController;
 use App\Http\Controllers\landPage\MajelisTaklimController;
@@ -29,6 +31,7 @@ Route::get('/', [DashboardController::class, 'dashboard_landpage'])->name('landp
 
 Route::get('/nurul_jihad', [NurulJihadController::class, 'index'])->name('nurul_jihad.index');
 Route::get('/nurul_jihad/kajian', [NurulJihadController::class, 'kajian'])->name('nurul_jihad.kajian');
+Route::get('/nurul_jihad/penceramah', [NurulJihadController::class, 'penceramah'])->name('nurul_jihad.penceramah');
 Route::get('/nurul_jihad/struktur', [NurulJihadController::class, 'struktur'])->name('nurul_jihad.struktur');
 Route::get('/nurul_jihad/program', [NurulJihadController::class, 'program'])->name('nurul_jihad.program');
 
@@ -44,6 +47,20 @@ Route::get('/ikramnurjihad', [IkramnurjihadController::class, 'index'])->name('i
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard_admin', [AdminpageDashboardController::class, 'index'])->name('dashboard.admin');
+
+    Route::get('/nurul_jihad/kajian-admin', [KajianController::class, 'index'])->name('kajian.nuruljihad.admin');
+    Route::get('/nurul_jihad/kajian-admin/create', [KajianController::class, 'create'])->name('create.kajian.nuruljihad.admin');
+    Route::post('/nurul_jihad/kajian-admin/store', [KajianController::class, 'store'])->name('store.kajian.nuruljihad.admin');
+    Route::get('/nurul_jihad/kajian-admin/edit/{id}', [KajianController::class, 'edit'])->name('edit.kajian.nuruljihad.admin');
+    Route::put('/nurul_jihad/kajian-admin/update/{id}', [KajianController::class, 'update'])->name('update.kajian.nuruljihad.admin');
+    Route::delete('/nurul_jihad/kajian-admin/delete/{id}', [KajianController::class, 'delete'])->name('delete.kajian.nuruljihad.admin');
+
+    Route::get('/nurul_jihad/struktur-admin', [StrukturController::class, 'index'])->name('struktur.nuruljihad.admin');
+    Route::get('/nurul_jihad/struktur-admin/create', [StrukturController::class, 'create'])->name('create.struktur.nuruljihad.admin');
+    Route::post('/nurul_jihad/struktur-admin/store', [StrukturController::class, 'store'])->name('store.struktur.nuruljihad.admin');
+    Route::get('/nurul_jihad/struktur-admin/edit/{id}', [StrukturController::class, 'edit'])->name('edit.struktur.nuruljihad.admin');
+    Route::put('/nurul_jihad/struktur-admin/update/{id}', [StrukturController::class, 'update'])->name('update.struktur.nuruljihad.admin');
+    Route::delete('/nurul_jihad/struktur-admin/delete/{id}', [StrukturController::class, 'delete'])->name('delete.struktur.nuruljihad.admin');
 });
 Auth::routes();
 
