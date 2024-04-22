@@ -16,8 +16,8 @@
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                         <li><a href="{{ route('nurul_jihad.index') }}" class="nav-link">Beranda</a></li>
                         <li><a href="{{ route('nurul_jihad.kajian') }}" class="nav-link">Kajian</a></li>
-                        <li><a href="{{-- route('nurul_jihad.penceramah') --}}" class="nav-link">Penceramah</a></li>
-                        <li><a href="{{ route('nurul_jihad.program') }}" class="nav-link">Program</a></li>
+                        <li><a href="{{ route('nurul_jihad.penceramah') }}" class="nav-link">Penceramah</a></li>
+                        <li><a href="{{ route('nurul_jihad.event') }}" class="nav-link">Event</a></li>
                         <li><a href="{{ route('nurul_jihad.struktur') }}" class="nav-link">Struktur</a></li>
                         <li><a href="contact.html" class="nav-link">Kontak</a></li>
                     </ul>

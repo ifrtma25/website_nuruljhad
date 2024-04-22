@@ -31,7 +31,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('kajian.nuruljihad.admin') }}">Kajian</a>
-                <a class="collapse-item" href="cards.html">Program</a>
+                <a class="collapse-item" href="{{ route('event.nuruljihad.admin') }}">Event</a>
                 <a class="collapse-item" href="{{ route('struktur.nuruljihad.admin') }}">Struktur</a>
             </div>
         </div>

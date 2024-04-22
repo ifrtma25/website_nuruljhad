@@ -29,11 +29,12 @@ class NurulJihadController extends Controller
     public function struktur()
     {
         $struktur = StrukturMasjid::all();
-        return view('component.landPage.nurulJihad.struktur', compact('struktur'));
+        $pimpinan = StrukturMasjid::where('jabatan', 'Pimpinan')->get();
+        return view('component.landPage.nurulJihad.struktur', compact('struktur', 'pimpinan'));
     }
 
-    public function program()
+    public function event()
     {
-        return view('component.landPage.nurulJihad.program');
+        return view('component.landPage.nurulJihad.event');
     }
 }

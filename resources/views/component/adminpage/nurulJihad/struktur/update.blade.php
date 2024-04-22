@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Tambah Data')
+@section('title', 'Update Data')
 @section('content')
     <div class="container">
 
@@ -15,11 +15,12 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
                                         action="{{ route('update.struktur.nuruljihad.admin', $struktur->id) }}"
                                         enctype="multipart/form-data" method="POST">
+                                        @method('PUT')
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
@@ -43,7 +44,7 @@
                                             @endif
                                         </div>
                                         <button class="btn btn-primary btn-user">
-                                            Tambah Data
+                                            Update Data
                                         </button>
                                         <a href="{{ route('struktur.nuruljihad.admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
