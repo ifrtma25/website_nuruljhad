@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\landpage;
 
 use App\Http\Controllers\Controller;
+use App\Models\Event;
 use App\Models\Kajian;
 use App\Models\StrukturMasjid;
 use Illuminate\Http\Request;
@@ -35,6 +36,7 @@ class NurulJihadController extends Controller
 
     public function event()
     {
-        return view('component.landPage.nurulJihad.event');
+        $event = Event::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.event', compact('event'));
     }
 }
