@@ -3,6 +3,7 @@
 use App\Http\Controllers\adminpage\DashboardController as AdminpageDashboardController;
 use App\Http\Controllers\adminPage\EventController;
 use App\Http\Controllers\adminPage\KajianController;
+use App\Http\Controllers\adminPage\PenceramahController;
 use App\Http\Controllers\adminPage\StrukturController;
 use App\Http\Controllers\landpage\DashboardController;
 use App\Http\Controllers\landPage\IkramnurjihadController;
@@ -59,9 +60,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/nurul_jihad/event-admin', [EventController::class, 'index'])->name('event.nuruljihad.admin');
     Route::get('/nurul_jihad/event-admin/create', [EventController::class, 'create'])->name('create.event.nuruljihad.admin');
     Route::post('/nurul_jihad/event-admin/store', [EventController::class, 'store'])->name('store.event.nuruljihad.admin');
-    // Route::get('/nurul_jihad/event-admin/edit/{id}', [EventController::class, 'edit'])->name('edit.event.nuruljihad.admin');
-    // Route::put('/nurul_jihad/event-admin/update/{id}', [EventController::class, 'update'])->name('update.event.nuruljihad.admin');
-    // Route::delete('/nurul_jihad/event-admin/delete/{id}', [EventController::class, 'delete'])->name('delete.event.nuruljihad.admin');
+    Route::get('/nurul_jihad/event-admin/edit/{id}', [EventController::class, 'edit'])->name('edit.event.nuruljihad.admin');
+    Route::put('/nurul_jihad/event-admin/update/{id}', [EventController::class, 'update'])->name('update.event.nuruljihad.admin');
+    Route::delete('/nurul_jihad/event-admin/delete/{id}', [EventController::class, 'delete'])->name('delete.event.nuruljihad.admin');
 
     Route::get('/nurul_jihad/struktur-admin', [StrukturController::class, 'index'])->name('struktur.nuruljihad.admin');
     Route::get('/nurul_jihad/struktur-admin/create', [StrukturController::class, 'create'])->name('create.struktur.nuruljihad.admin');
@@ -69,6 +70,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/nurul_jihad/struktur-admin/edit/{id}', [StrukturController::class, 'edit'])->name('edit.struktur.nuruljihad.admin');
     Route::put('/nurul_jihad/struktur-admin/update/{id}', [StrukturController::class, 'update'])->name('update.struktur.nuruljihad.admin');
     Route::delete('/nurul_jihad/struktur-admin/delete/{id}', [StrukturController::class, 'delete'])->name('delete.struktur.nuruljihad.admin');
+
+    Route::get('/nurul_jihad/penceramah-admin', [PenceramahController::class, 'index'])->name('penceramah.nuruljihad.admin');
+    // Route::get('/nurul_jihad/penceramah-admin/create', [StrukturController::class, 'create'])->name('create.penceramah.nuruljihad.admin');
+    // Route::post('/nurul_jihad/penceramah-admin/store', [StrukturController::class, 'store'])->name('store.penceramah.nuruljihad.admin');
+    // Route::get('/nurul_jihad/penceramah-admin/edit/{id}', [StrukturController::class, 'edit'])->name('edit.penceramah.nuruljihad.admin');
+    // Route::put('/nurul_jihad/penceramah-admin/update/{id}', [StrukturController::class, 'update'])->name('update.penceramah.nuruljihad.admin');
+    // Route::delete('/nurul_jihad/penceramah-admin/delete/{id}', [StrukturController::class, 'delete'])->name('delete.penceramah.nuruljihad.admin');
 });
 Auth::routes();
 

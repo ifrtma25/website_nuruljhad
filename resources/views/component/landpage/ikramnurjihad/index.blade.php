@@ -3,7 +3,7 @@
 @section('header')
     <header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center position-relative">
                 <div>
                     <a href="{{ route('nurul_jihad.index') }}" class="text-white">

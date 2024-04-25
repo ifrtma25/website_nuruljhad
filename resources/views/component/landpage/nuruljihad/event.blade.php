@@ -53,7 +53,8 @@
                     <div class="col-md-4">
                         <div class="cause shadow-sm">
 
-                            <a href="#" class="cause-link d-block">
+                            <a href="{{ asset('storage/' . $item->gambar) }}" target="blankspace"
+                                class="cause-link d-block">
                                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="Image" class="img-fluid">
                                 <div class="custom-progress-wrap">
                                     {{-- <span class="caption">80% complete</span> --}}

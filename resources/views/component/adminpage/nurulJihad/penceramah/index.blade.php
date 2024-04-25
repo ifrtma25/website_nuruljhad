@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Event')
+@section('title', 'Penceramah')
 @section('content')
     @if (session('status'))
         <script>
@@ -13,12 +13,12 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Daftar Event</h1>
+        <h1 class="h3 mb-2 text-gray-800">Penceramah</h1>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('create.event.nuruljihad.admin') }}" class="btn btn-primary">Tambah Data</a>
+                <a href="{{-- route('') --}}" class="btn btn-primary">Tambah Data</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -26,28 +26,26 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Nama Kegiatan</th>
-                                <th>Tema</th>
-                                <th>Tanggal</th>
+                                <th>Nama Penceramah</th>
+                                <th>Alamat</th>
                                 <th>Gambar</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        @foreach ($event as $key => $item)
+                        {{-- @foreach ($struktur as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
-                                    <td>{{ $item->nama_kegiatan }}</td>
-                                    <td>{{ $item->tema }}</td>
-                                    <td>{{ $item->tanggal }}</td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->jabatan }}</td>
                                     <td><img src="{{ asset('storage/' . $item->gambar) }}" alt="" width="150px">
                                     </td>
                                     <td>
                                         <div class="form-buttom-action">
-                                            <a href="{{ route('edit.event.nuruljihad.admin', $item->id) }}"
+                                            <a href="{{ route('edit.struktur.nuruljihad.admin', $item->id) }}"
                                                 data-toggle="tooltip" title="Update" class="btn btn-primary"
                                                 data-original-title="Update"><i class="fa fa-edit"></i></a>
-                                            <form action="{{ route('delete.event.nuruljihad.admin', $item->id) }}"
+                                            <form action="{{ route('delete.struktur.nuruljihad.admin', $item->id) }}"
                                                 method="POST" onsubmit="return confirm('Yakin?')" style="display: inline">
                                                 @csrf
                                                 @method('DELETE')
@@ -58,7 +56,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        @endforeach
+                        @endforeach --}}
                     </table>
                 </div>
             </div>
