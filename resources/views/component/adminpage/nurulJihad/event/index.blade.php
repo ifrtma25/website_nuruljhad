@@ -40,7 +40,9 @@
                                     <td>{{ $item->nama_kegiatan }}</td>
                                     <td>{{ $item->tema }}</td>
                                     <td>{{ $item->tanggal }}</td>
-                                    <td><img src="{{ asset('storage/' . $item->gambar) }}" alt="" width="150px">
+                                    <td><a href="{{ asset('storage/' . $item->gambar) }}" target="blankspace"><img
+                                                src="{{ asset('storage/' . $item->gambar) }}" alt=""
+                                                width="150px"></a>
                                     </td>
                                     <td>
                                         <div class="form-buttom-action">

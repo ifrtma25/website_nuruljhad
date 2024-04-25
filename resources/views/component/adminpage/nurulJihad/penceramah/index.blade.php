@@ -18,7 +18,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{-- route('') --}}" class="btn btn-primary">Tambah Data</a>
+                <a href="{{ route('create.penceramah.nuruljihad.admin') }}" class="btn btn-primary">Tambah Data</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -32,20 +32,20 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        {{-- @foreach ($struktur as $key => $item)
+                        @foreach ($penceramah as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $item->nama }}</td>
-                                    <td>{{ $item->jabatan }}</td>
+                                    <td>{{ $item->alamat }}</td>
                                     <td><img src="{{ asset('storage/' . $item->gambar) }}" alt="" width="150px">
                                     </td>
                                     <td>
                                         <div class="form-buttom-action">
-                                            <a href="{{ route('edit.struktur.nuruljihad.admin', $item->id) }}"
+                                            <a href="{{ route('edit.penceramah.nuruljihad.admin', $item->id) }}"
                                                 data-toggle="tooltip" title="Update" class="btn btn-primary"
                                                 data-original-title="Update"><i class="fa fa-edit"></i></a>
-                                            <form action="{{ route('delete.struktur.nuruljihad.admin', $item->id) }}"
+                                            <form action="{{ route('delete.penceramah.nuruljihad.admin', $item->id) }}"
                                                 method="POST" onsubmit="return confirm('Yakin?')" style="display: inline">
                                                 @csrf
                                                 @method('DELETE')
@@ -56,7 +56,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        @endforeach --}}
+                        @endforeach
                     </table>
                 </div>
             </div>

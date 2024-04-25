@@ -72,11 +72,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/nurul_jihad/struktur-admin/delete/{id}', [StrukturController::class, 'delete'])->name('delete.struktur.nuruljihad.admin');
 
     Route::get('/nurul_jihad/penceramah-admin', [PenceramahController::class, 'index'])->name('penceramah.nuruljihad.admin');
-    // Route::get('/nurul_jihad/penceramah-admin/create', [StrukturController::class, 'create'])->name('create.penceramah.nuruljihad.admin');
-    // Route::post('/nurul_jihad/penceramah-admin/store', [StrukturController::class, 'store'])->name('store.penceramah.nuruljihad.admin');
-    // Route::get('/nurul_jihad/penceramah-admin/edit/{id}', [StrukturController::class, 'edit'])->name('edit.penceramah.nuruljihad.admin');
-    // Route::put('/nurul_jihad/penceramah-admin/update/{id}', [StrukturController::class, 'update'])->name('update.penceramah.nuruljihad.admin');
-    // Route::delete('/nurul_jihad/penceramah-admin/delete/{id}', [StrukturController::class, 'delete'])->name('delete.penceramah.nuruljihad.admin');
+    Route::get('/nurul_jihad/penceramah-admin/create', [PenceramahController::class, 'create'])->name('create.penceramah.nuruljihad.admin');
+    Route::post('/nurul_jihad/penceramah-admin/store', [PenceramahController::class, 'store'])->name('store.penceramah.nuruljihad.admin');
+    Route::get('/nurul_jihad/penceramah-admin/edit/{id}', [PenceramahController::class, 'edit'])->name('edit.penceramah.nuruljihad.admin');
+    Route::put('/nurul_jihad/penceramah-admin/update/{id}', [PenceramahController::class, 'update'])->name('update.penceramah.nuruljihad.admin');
+    Route::delete('/nurul_jihad/penceramah-admin/delete/{id}', [PenceramahController::class, 'delete'])->name('delete.penceramah.nuruljihad.admin');
 });
 Auth::routes();
 

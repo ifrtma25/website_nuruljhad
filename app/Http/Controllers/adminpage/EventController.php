@@ -11,7 +11,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $event = Event::all();
+        $event = Event::orderby('tanggal', 'desc')->get();
         return view('component.adminPage.nurulJihad.event.index', compact('event'));
     }
 

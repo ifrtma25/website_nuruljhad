@@ -5,6 +5,7 @@ namespace App\Http\Controllers\landpage;
 use App\Http\Controllers\Controller;
 use App\Models\Event;
 use App\Models\Kajian;
+use App\Models\Penceramah;
 use App\Models\StrukturMasjid;
 use Illuminate\Http\Request;
 
@@ -24,7 +25,8 @@ class NurulJihadController extends Controller
 
     public function penceramah()
     {
-        return view('component.landPage.nurulJihad.penceramah');
+        $penceramah = Penceramah::orderby('nama', 'asc')->get();
+        return view('component.landPage.nurulJihad.penceramah', compact('penceramah'));
     }
 
     public function struktur()

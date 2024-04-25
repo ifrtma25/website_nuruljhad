@@ -10,6 +10,6 @@ class Penceramah extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_penceramah', 'alamat', 'gambar'
+        'nama', 'alamat', 'gambar'
     ];
 }

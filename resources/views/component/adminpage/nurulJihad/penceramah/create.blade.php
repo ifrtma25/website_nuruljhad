@@ -17,7 +17,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store.struktur.nuruljihad.admin') }}"
+                                    <form class="user" action="{{ route('store.penceramah.nuruljihad.admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -26,9 +26,9 @@
                                                 name="nama" placeholder="Nama...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control form-control-user" id="jabatan"
-                                                name="jabatan" placeholder="Jabatan...">
+                                            <label for="alamat">Alamat</label>
+                                            <input type="text" class="form-control form-control-user" id="alamat"
+                                                name="alamat" placeholder="Alamat...">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
@@ -38,7 +38,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('struktur.nuruljihad.admin') }}"
+                                        <a href="{{ route('penceramah.nuruljihad.admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>
