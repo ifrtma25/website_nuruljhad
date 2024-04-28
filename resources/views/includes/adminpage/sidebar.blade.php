@@ -30,7 +30,7 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('event.nuruljihad.admin') }}">Event</a>
+                <a class="collapse-item" href="{{ route('kegiatan.nuruljihad.admin') }}">Kegiatan</a>
                 <a class="collapse-item" href="{{ route('kajian.nuruljihad.admin') }}">Kajian</a>
                 <a class="collapse-item" href="{{ route('penceramah.nuruljihad.admin') }}">Penceramah</a>
                 <a class="collapse-item" href="{{ route('struktur.nuruljihad.admin') }}">Struktur</a>

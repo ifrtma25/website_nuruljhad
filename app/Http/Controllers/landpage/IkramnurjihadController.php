@@ -9,6 +9,11 @@ class IkramnurjihadController extends Controller
 {
     public function index()
     {
-        return view('component.landPage.ikramnurjihad.index');
+        return view('component.landpage.ikramnurjihad.index');
+    }
+
+    public function struktur()
+    {
+        return view('component.landpage.ikramnurjihad.struktur');
     }
 }

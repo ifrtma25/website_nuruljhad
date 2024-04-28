@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\adminPage;
+namespace App\Http\Controllers\adminpage\nuruljihad;
 
 use App\Http\Controllers\Controller;
 use App\Models\Penceramah;

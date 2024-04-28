@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\adminPage;
+namespace App\Http\Controllers\adminpage\ikramnurjihad;
 
 use App\Http\Controllers\Controller;
-use App\Models\StrukturMasjid;
+use App\Models\StrukturIkramnurjihad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,13 +11,13 @@ class StrukturController extends Controller
 {
     public function index()
     {
-        $struktur = StrukturMasjid::all();
-        return view('component.adminPage.nurulJihad.struktur.index', compact('struktur'));
+        $struktur = StrukturIkramnurjihad::all();
+        return view('component.landpage.ikramnurjihad.struktur', compact('struktur'));
     }
 
     public function create()
     {
-        return view('component.adminPage.nurulJihad.struktur.create');
+        return view('component.landpage.ikramnurjihad.index');
     }
 
     public function store(Request $request)
@@ -29,10 +29,10 @@ class StrukturController extends Controller
         ]);
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('strukturMasjid', 'public');
+            $file = $request->file('gambar')->store('strukturikramnurjihad', 'public');
         }
 
-        StrukturMasjid::create([
+        StrukturIkramnurjihad::create([
             'nama' => $request->input('nama'),
             'jabatan' => $request->input('jabatan'),
             'gambar' => $file,
@@ -43,13 +43,13 @@ class StrukturController extends Controller
 
     public function edit(Request $request, $id)
     {
-        $struktur = StrukturMasjid::where('id', $id)->first();
+        $struktur = StrukturIkramnurjihad::where('id', $id)->first();
         return view('component.adminPage.nurulJihad.struktur.update', compact('struktur'));
     }
 
     public function update(Request $request, $id)
     {
-        $struktur = StrukturMasjid::where('id', $id)->first();
+        $struktur = StrukturIkramnurjihad::where('id', $id)->first();
 
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('struktur', 'public');
@@ -74,7 +74,7 @@ class StrukturController extends Controller
 
     public function delete($id)
     {
-        $delete = StrukturMasjid::find($id);
+        $delete = StrukturIkramnurjihad::find($id);
 
         if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
             Storage::delete('public/' . $delete->gambar);

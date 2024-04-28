@@ -22,7 +22,7 @@
 
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="feature-29192-wrap d-md-flex" style="margin-top: -20px; position: relative; z-index: 2;">
 
             <a href="#" class="feature-29192 overlay-warning"
@@ -33,19 +33,41 @@
                 </div>
             </a>
 
-            <a class="feature-29192 overlay-warning" style="background-image: url('assets/landpage/images/image_6.jpg');">
-                <div class="text">
-                    {{-- <span class="meta">TK/TPA</span> --}}
-                    <h3 class="text-cursive text-white h1">TK/TPA</h3>
-                </div>
-            </a>
-
-            <div class="feature-29192 overlay-warning" style="background-image: url('images/img_1_gray.jpg');">
+            <a href="#" class="feature-29192 overlay-warning" style="background-image: url('images/img_1_gray.jpg');">
                 <div class="text">
                     {{-- <span class="meta">Rumah Tahfidz</span> --}}
                     <h3 class="text-cursive text-white h1">Rumah Tahfidz</h3>
                 </div>
-            </div>
+            </a>
+
+            <a href="#" class="feature-29192 overlay-warning"
+                style="background-image: url('assets/landpage/images/image_6.jpg');">
+                <div class="text">
+                    {{-- <span class="meta">TK/TPA</span> --}}
+                    <h3 class="text-cursive text-white h1">RA Darul Istiqamah</h3>
+                </div>
+            </a>
+
+            <a href="#" class="feature-29192 overlay-warning" style="background-image: url('images/img_1_gray.jpg');">
+                <div class="text">
+                    {{-- <span class="meta">Rumah Tahfidz</span> --}}
+                    <h3 class="text-cursive text-white h1">TPA Darul Istiqamah</h3>
+                </div>
+            </a>
+
+            <a href="#" class="feature-29192 overlay-warning" style="background-image: url('images/img_1_gray.jpg');">
+                <div class="text">
+                    {{-- <span class="meta">Rumah Tahfidz</span> --}}
+                    <h3 class="text-cursive text-white h1">Majelis Taklim</h3>
+                </div>
+            </a>
+
+            <a href="#" class="feature-29192 overlay-warning" style="background-image: url('images/img_1_gray.jpg');">
+                <div class="text">
+                    {{-- <span class="meta">Rumah Tahfidz</span> --}}
+                    <h3 class="text-cursive text-white h1">IkramnurJihad</h3>
+                </div>
+            </a>
 
         </div>
     </div>

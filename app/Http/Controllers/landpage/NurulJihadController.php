@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\landpage;
 
 use App\Http\Controllers\Controller;
-use App\Models\Event;
 use App\Models\Kajian;
+use App\Models\Kegiatan;
 use App\Models\Penceramah;
 use App\Models\StrukturMasjid;
 use Illuminate\Http\Request;
@@ -36,9 +36,15 @@ class NurulJihadController extends Controller
         return view('component.landPage.nurulJihad.struktur', compact('struktur', 'pimpinan'));
     }
 
-    public function event()
+    public function kegiatan()
     {
-        $event = Event::orderby('tanggal', 'desc')->take(6)->get();
-        return view('component.landPage.nurulJihad.event', compact('event'));
+        $kegiatan = Kegiatan::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.kegiatan', compact('kegiatan'));
+    }
+
+    public function kontak()
+    {
+        // $kegiatan = Kegiatan::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landpage.nuruljihad.kontak');
     }
 }
