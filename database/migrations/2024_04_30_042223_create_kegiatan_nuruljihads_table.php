@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('struktur_masjids', function (Blueprint $table) {
+        Schema::create('kegiatan_nuruljihads', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('jabatan');
+            $table->string('nama_kegiatan');
+            $table->string('tema');
+            $table->date('tanggal');
             $table->string('gambar');
             $table->timestamps();
         });
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('struktur_masjids');
+        Schema::dropIfExists('kegiatan_nuruljihads');
     }
 };

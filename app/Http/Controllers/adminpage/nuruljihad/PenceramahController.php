@@ -38,7 +38,7 @@ class PenceramahController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('penceramah.nuruljihad.admin')->with('status', 'Data berhasil ditambah');
+        return redirect()->route('penceramah-nuruljihad-admin')->with('status', 'Data berhasil ditambah');
     }
 
     public function edit(Request $request, $id)
@@ -69,7 +69,7 @@ class PenceramahController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('penceramah.nuruljihad.admin')->with('status', 'Data berhasil diupdate');
+        return redirect()->route('penceramah-nuruljihad-admin')->with('status', 'Data berhasil diupdate');
     }
 
     public function delete($id)
@@ -82,6 +82,6 @@ class PenceramahController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('penceramah.nuruljihad.admin')->with('status', 'Data berhasil dihapus');
+        return redirect()->route('penceramah-nuruljihad-admin')->with('status', 'Data berhasil dihapus');
     }
 }

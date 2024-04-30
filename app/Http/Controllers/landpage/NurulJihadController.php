@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\landpage;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kajian;
+use App\Models\KajianMasjid;
+use App\Models\KajianNuruljihad;
 use App\Models\Kegiatan;
+use App\Models\KegiatanNuruljihad;
 use App\Models\Penceramah;
 use App\Models\StrukturMasjid;
+use App\Models\StrukturNuruljihad;
 use Illuminate\Http\Request;
 
 class NurulJihadController extends Controller
@@ -18,9 +21,9 @@ class NurulJihadController extends Controller
 
     public function kajian()
     {
-        // $kajian = Kajian::latest()->take(3)->get();
-        $kajian = Kajian::orderby('tanggal', 'desc')->take(6)->get();
-        return view('component.landPage.nurulJihad.kajian', compact('kajian'));
+        // $kajiannuruljihad = KajianNuruljihad::latest()->take(3)->get();
+        $kajiannuruljihad = KajianNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.kajian', compact('kajiannuruljihad'));
     }
 
     public function penceramah()
@@ -31,15 +34,15 @@ class NurulJihadController extends Controller
 
     public function struktur()
     {
-        $struktur = StrukturMasjid::all();
-        $pimpinan = StrukturMasjid::where('jabatan', 'Pimpinan')->get();
-        return view('component.landPage.nurulJihad.struktur', compact('struktur', 'pimpinan'));
+        $strukturnuruljihad = StrukturNuruljihad::all();
+        $pimpinan = StrukturNuruljihad::where('jabatan', 'Pimpinan')->get();
+        return view('component.landPage.nurulJihad.struktur', compact('strukturnuruljihad', 'pimpinan'));
     }
 
     public function kegiatan()
     {
-        $kegiatan = Kegiatan::orderby('tanggal', 'desc')->take(6)->get();
-        return view('component.landPage.nurulJihad.kegiatan', compact('kegiatan'));
+        $kegiatannuruljihad = KegiatanNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.kegiatan', compact('kegiatannuruljihad'));
     }
 
     public function kontak()

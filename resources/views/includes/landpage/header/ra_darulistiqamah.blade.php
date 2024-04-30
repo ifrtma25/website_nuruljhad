@@ -11,7 +11,7 @@
 
             <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    <li><a href="{{ route('raudhatul_athfal.index') }}" class="nav-link">Dashboard</a></li>
+                    <li><a href="{{ route('raudhatul_athfal-index') }}" class="nav-link">Dashboard</a></li>
                     <li><a href="about.html" class="nav-link">About Us</a></li>
                     <li><a href="causes.html" class="nav-link">Our Causes</a></li>
                     <li><a href="blog.html" class="nav-link">Blog</a></li>

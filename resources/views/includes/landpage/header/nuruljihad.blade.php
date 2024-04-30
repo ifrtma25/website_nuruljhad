@@ -4,19 +4,19 @@
         <div class="row align-items-center position-relative">
 
             <div>
-                <a href="{{ route('nurul_jihad.index') }}" class="text-white">
+                <a href="{{ route('nurul_jihad-index') }}" class="text-white">
                     <h2 class="text-white">Masjid Nurul Jihad</h2>
                 </a>
             </div>
 
             <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    <li><a href="{{ route('nurul_jihad.index') }}" class="nav-link">Beranda</a></li>
-                    <li><a href="{{ route('nurul_jihad.kajian') }}" class="nav-link">Kajian</a></li>
-                    <li><a href="{{ route('nurul_jihad.penceramah') }}" class="nav-link">Penceramah</a></li>
-                    <li><a href="{{ route('nurul_jihad.kegiatan') }}" class="nav-link">Kegiatan</a></li>
-                    <li><a href="{{ route('nurul_jihad.struktur') }}" class="nav-link">Struktur</a></li>
-                    <li><a href="{{ route('nurul_jihad.kontak') }}" class="nav-link">Kontak</a></li>
+                    <li><a href="{{ route('nurul_jihad-index') }}" class="nav-link">Beranda</a></li>
+                    <li><a href="{{ route('nurul_jihad-kajian') }}" class="nav-link">Kajian</a></li>
+                    <li><a href="{{ route('nurul_jihad-penceramah') }}" class="nav-link">Penceramah</a></li>
+                    <li><a href="{{ route('nurul_jihad-kegiatan') }}" class="nav-link">Kegiatan</a></li>
+                    <li><a href="{{ route('nurul_jihad-struktur') }}" class="nav-link">Struktur</a></li>
+                    <li><a href="{{ route('nurul_jihad-kontak') }}" class="nav-link">Kontak</a></li>
                 </ul>
             </nav>
 

@@ -11,7 +11,7 @@
 
             <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    <li><a href="{{ route('rumah_tahfidz.index') }}" class="nav-link">Beranda</a></li>
+                    <li><a href="{{ route('rumah_tahfidz-index') }}" class="nav-link">Beranda</a></li>
                     <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
                     <li><a href="causes.html" class="nav-link">Daftar Santri</a></li>
                     <li><a href="blog.html" class="nav-link">Informasi</a></li>

@@ -49,7 +49,7 @@
                 @endforeach
             </div> --}}
             <div class="row align-items-stretch">
-                @foreach ($struktur as $item)
+                @foreach ($strukturnuruljihad as $item)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="post-entry-1 h-100 bg-white text-center">
                             <a href="#" class="d-inline-block">

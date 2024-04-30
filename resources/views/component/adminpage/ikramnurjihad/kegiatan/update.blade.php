@@ -18,33 +18,27 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update-kajian-nuruljihad-admin', $kajiannuruljihad->id) }}"
+                                        action="{{ route('update-kegiatan-ikramnurjihad-admin', $kegiatan->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama_penceramah">Nama</label>
-                                            <input type="text" class="form-control form-control-user"
-                                                id="nama_penceramah" name="nama_penceramah"
-                                                value="{{ $kajiannuruljihad->nama_penceramah }}">
+                                            <label for="nama">Nama</label>
+                                            <input type="text" class="form-control form-control-user" id="nama"
+                                                name="nama" value="{{ $kegiatan->nama }}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="tema">Tema</label>
-                                            <input type="text" class="form-control form-control-user" id="tema"
-                                                name="tema" value="{{ $kajiannuruljihad->tema }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tanggal">Tanggal</label>
-                                            <input type="date" class="form-control form-control-user" id="tanggal"
-                                                name="tanggal" value="{{ $kajiannuruljihad->tanggal }}">
+                                            <label for="jabatan">Jabatan</label>
+                                            <input type="text" class="form-control form-control-user" id="jabatan"
+                                                name="jabatan" value="{{ $kegiatan->jabatan }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $kajiannuruljihad->gambar }}">
-                                            @if ($kajiannuruljihad->gambar)
-                                                <img src="{{ asset('storage/' . $kajiannuruljihad->gambar) }}"
-                                                    alt="" width="100px">
+                                                name="gambar" value="{{ $kegiatan->gambar }}">
+                                            @if ($kegiatan->gambar)
+                                                <img src="{{ asset('storage/' . $kegiatan->gambar) }}" alt=""
+                                                    width="100px">
                                             @else
                                                 <p>Gambar tidak tersedia</p>
                                             @endif
@@ -52,7 +46,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('kajian-nuruljihad-admin') }}"
+                                        <a href="{{ route('kegiatan-ikramnurjihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

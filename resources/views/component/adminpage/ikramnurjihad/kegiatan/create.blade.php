@@ -17,23 +17,18 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store-kegiatan-nuruljihad-admin') }}"
+                                    <form class="user" action="{{ route('store-kegiatan-ikramnurjihad-admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama_kegiatan">Nama Kegiatan</label>
-                                            <input type="text" class="form-control form-control-user" id="nama_kegiatan"
-                                                name="nama_kegiatan" placeholder="Nama kegiatan...">
+                                            <label for="nama">Nama</label>
+                                            <input type="text" class="form-control form-control-user" id="nama"
+                                                name="nama" placeholder="Nama...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="tema">Tema</label>
-                                            <input type="text" class="form-control form-control-user" id="tema"
-                                                name="tema" placeholder="Tema...">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tanggal">Tanggal</label>
-                                            <input type="date" class="form-control form-control-user" id="tanggal"
-                                                name="tanggal">
+                                            <label for="jabatan">Jabatan</label>
+                                            <input type="text" class="form-control form-control-user" id="jabatan"
+                                                name="jabatan" placeholder="Jabatan...">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
@@ -43,7 +38,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('kegiatan-nuruljihad-admin') }}"
+                                        <a href="{{ route('kegiatan-ikramnurjihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

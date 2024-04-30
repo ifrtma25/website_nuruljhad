@@ -17,7 +17,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store.struktur.nuruljihad.admin') }}"
+                                    <form class="user" action="{{ route('store-struktur-ikramnurjihad-admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -38,7 +38,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('struktur.nuruljihad.admin') }}"
+                                        <a href="{{ route('struktur-ikramnurjihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

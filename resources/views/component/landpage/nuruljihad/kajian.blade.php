@@ -8,7 +8,7 @@
                 <h2 class="title text-cursive">Kajian</h2>
             </div>
             <div class="row">
-                @foreach ($kajian as $item)
+                @foreach ($kajiannuruljihad as $item)
                     <div class="col-md-4 p-2">
                         <div class="event-29191 mb-5">
                             <div class="card">

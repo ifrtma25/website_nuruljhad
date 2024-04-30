@@ -18,7 +18,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('create.kajian.nuruljihad.admin') }}" class="btn btn-primary">Upload Kajian</a>
+                <a href="{{ route('create-kajian-nuruljihad-admin') }}" class="btn btn-primary">Upload Kajian</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -33,7 +33,7 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        @foreach ($kajian as $key => $item)
+                        @foreach ($kajiannuruljihad as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
@@ -44,10 +44,10 @@
                                     </td>
                                     <td>
                                         <div class="form-buttom-action">
-                                            <a href="{{ route('edit.kajian.nuruljihad.admin', $item->id) }}"
+                                            <a href="{{ route('edit-kajian-nuruljihad-admin', $item->id) }}"
                                                 data-toggle="tooltip" title="Update" class="btn btn-primary"
                                                 data-original-title="Update"><i class="fa fa-edit"></i></a>
-                                            <form action="{{ route('delete.kajian.nuruljihad.admin', $item->id) }}"
+                                            <form action="{{ route('delete-kajian-nuruljihad-admin', $item->id) }}"
                                                 method="POST" onsubmit="return confirm('Yakin?')" style="display: inline">
                                                 @csrf
                                                 @method('DELETE')

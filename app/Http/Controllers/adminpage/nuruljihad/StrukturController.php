@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\adminpage\nuruljihad;
 
 use App\Http\Controllers\Controller;
-use App\Models\StrukturMasjid;
+use App\Models\StrukturNuruljihad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,8 +11,8 @@ class StrukturController extends Controller
 {
     public function index()
     {
-        $struktur = StrukturMasjid::all();
-        return view('component.adminPage.nurulJihad.struktur.index', compact('struktur'));
+        $struktur = StrukturNuruljihad::all();
+        return view('component.adminPage.nurulJihad.struktur.index', compact('strukturnuruljihad'));
     }
 
     public function create()
@@ -32,30 +32,30 @@ class StrukturController extends Controller
             $file = $request->file('gambar')->store('strukturMasjid', 'public');
         }
 
-        StrukturMasjid::create([
+        StrukturNuruljihad::create([
             'nama' => $request->input('nama'),
             'jabatan' => $request->input('jabatan'),
             'gambar' => $file,
         ]);
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Berhasil tambah data');
+        return redirect()->route('struktur-nuruljihad-admin')->with('status', 'Berhasil tambah data');
     }
 
     public function edit(Request $request, $id)
     {
-        $struktur = StrukturMasjid::where('id', $id)->first();
-        return view('component.adminPage.nurulJihad.struktur.update', compact('struktur'));
+        $struktur = StrukturNuruljihad::where('id', $id)->first();
+        return view('component.adminPage.nurulJihad.struktur.update', compact('strukturnuruljihad'));
     }
 
     public function update(Request $request, $id)
     {
-        $struktur = StrukturMasjid::where('id', $id)->first();
+        $struktur = StrukturNuruljihad::where('id', $id)->first();
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('struktur', 'public');
+            $file = $request->file('gambar')->store('strukturnuruljihad', 'public');
             if ($struktur->gambar && file_exists(storage_path('app/public/' . $struktur->gambar))) {
                 Storage::delete('public/' . $struktur->gambar);
-                $file = $request->file('gambar')->store('struktur', 'public');
+                $file = $request->file('gambar')->store('strukturnuruljihad', 'public');
             }
         }
 
@@ -69,12 +69,12 @@ class StrukturController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Data berhasil diupdate');
+        return redirect()->route('struktur-nuruljihad-admin')->with('status', 'Data berhasil diupdate');
     }
 
     public function delete($id)
     {
-        $delete = StrukturMasjid::find($id);
+        $delete = StrukturNuruljihad::find($id);
 
         if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
             Storage::delete('public/' . $delete->gambar);
@@ -82,6 +82,6 @@ class StrukturController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Data berhasil dihapus');
+        return redirect()->route('struktur-nuruljihad-admin')->with('status', 'Data berhasil dihapus');
     }
 }

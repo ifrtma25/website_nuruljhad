@@ -18,7 +18,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update.struktur.nuruljihad.admin', $struktur->id) }}"
+                                        action="{{ route('update-struktur-ikramnurjihad-admin', $struktur->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
@@ -46,7 +46,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('struktur.nuruljihad.admin') }}"
+                                        <a href="{{ route('struktur-ikramnurjihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

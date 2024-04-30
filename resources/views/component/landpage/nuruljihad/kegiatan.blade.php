@@ -19,7 +19,7 @@
             </div>
 
             <div class="row justify-content-center">
-                @foreach ($kegiatan as $item)
+                @foreach ($kegiatannuruljihad as $item)
                     <div class="col-md-4">
                         <div class="cause shadow-sm">
 

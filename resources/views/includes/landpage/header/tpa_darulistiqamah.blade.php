@@ -11,7 +11,7 @@
 
             <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                    <li><a href="{{ route('tpa.index') }}" class="nav-link">Beranda</a></li>
+                    <li><a href="{{ route('tpa-index') }}" class="nav-link">Beranda</a></li>
                     <li><a href="{{-- route('tpa.kajian') --}}" class="nav-link">Kajian</a></li>
                     <li><a href="blog.html" class="nav-link">Informasi</a></li>
                     <li><a href="contact.html" class="nav-link">Kontak</a></li>

@@ -12,12 +12,12 @@ class StrukturController extends Controller
     public function index()
     {
         $struktur = StrukturIkramnurjihad::all();
-        return view('component.landpage.ikramnurjihad.struktur', compact('struktur'));
+        return view('component.adminPage.ikramnurJihad.struktur.index', compact('struktur'));
     }
 
     public function create()
     {
-        return view('component.landpage.ikramnurjihad.index');
+        return view('component.adminPage.ikramnurJihad.struktur.create');
     }
 
     public function store(Request $request)
@@ -38,13 +38,13 @@ class StrukturController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Berhasil tambah data');
+        return redirect()->route('struktur-ikramnurjihad-admin')->with('status', 'Berhasil tambah data');
     }
 
     public function edit(Request $request, $id)
     {
         $struktur = StrukturIkramnurjihad::where('id', $id)->first();
-        return view('component.adminPage.nurulJihad.struktur.update', compact('struktur'));
+        return view('component.adminPage.ikramnurJihad.struktur.update', compact('struktur'));
     }
 
     public function update(Request $request, $id)
@@ -52,7 +52,7 @@ class StrukturController extends Controller
         $struktur = StrukturIkramnurjihad::where('id', $id)->first();
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('struktur', 'public');
+            $file = $request->file('gambar')->store('strukturikramnurjihad', 'public');
             if ($struktur->gambar && file_exists(storage_path('app/public/' . $struktur->gambar))) {
                 Storage::delete('public/' . $struktur->gambar);
                 $file = $request->file('gambar')->store('struktur', 'public');
@@ -69,7 +69,7 @@ class StrukturController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Data berhasil diupdate');
+        return redirect()->route('struktur-ikramnurjihad-admin')->with('status', 'Data berhasil diupdate');
     }
 
     public function delete($id)
@@ -82,6 +82,6 @@ class StrukturController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('struktur.nuruljihad.admin')->with('status', 'Data berhasil dihapus');
+        return redirect()->route('struktur-ikramnurjihad-admin')->with('status', 'Data berhasil dihapus');
     }
 }

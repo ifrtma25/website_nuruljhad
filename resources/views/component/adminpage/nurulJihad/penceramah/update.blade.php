@@ -18,7 +18,7 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update.penceramah.nuruljihad.admin', $penceramah->id) }}"
+                                        action="{{ route('update-penceramah-nuruljihad-admin', $penceramah->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
@@ -46,7 +46,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('penceramah.nuruljihad.admin') }}"
+                                        <a href="{{ route('penceramah-nuruljihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

@@ -16,4 +16,14 @@ class IkramnurjihadController extends Controller
     {
         return view('component.landpage.ikramnurjihad.struktur');
     }
+
+    public function kajian()
+    {
+        return view('component.landPage.ikramnurjihad.index');
+    }
+
+    public function kegiatan()
+    {
+        return view('component.landPage.ikramnurjihad.kegiatan');
+    }
 }

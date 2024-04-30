@@ -18,32 +18,32 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update.kegiatan.nuruljihad.admin', $kegiatan->id) }}"
+                                        action="{{ route('update-kegiatan-nuruljihad-admin', $kegiatannuruljihad->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama_kegiatan">Nama</label>
                                             <input type="text" class="form-control form-control-user" id="nama_kegiatan"
-                                                name="nama_kegiatan" value="{{ $kegiatan->nama_kegiatan }}">
+                                                name="nama_kegiatan" value="{{ $kegiatannuruljihad->nama_kegiatan }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="tema">Tema</label>
                                             <input type="text" class="form-control form-control-user" id="tema"
-                                                name="tema" value="{{ $kegiatan->tema }}">
+                                                name="tema" value="{{ $kegiatannuruljihad->tema }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="tanggal">Tanggal</label>
                                             <input type="date" class="form-control form-control-user" id="tanggal"
-                                                name="tanggal" value="{{ $kegiatan->tanggal }}">
+                                                name="tanggal" value="{{ $kegiatannuruljihad->tanggal }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $kegiatan->gambar }}">
-                                            @if ($kegiatan->gambar)
-                                                <img src="{{ asset('storage/' . $kegiatan->gambar) }}" alt=""
-                                                    width="100px">
+                                                name="gambar" value="{{ $kegiatannuruljihad->gambar }}">
+                                            @if ($kegiatannuruljihad->gambar)
+                                                <img src="{{ asset('storage/' . $kegiatannuruljihad->gambar) }}"
+                                                    alt="" width="100px">
                                             @else
                                                 <p>Gambar tidak tersedia</p>
                                             @endif
@@ -51,7 +51,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('kegiatan.nuruljihad.admin') }}"
+                                        <a href="{{ route('kegiatan-nuruljihad-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

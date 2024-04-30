@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\adminpage\nuruljihad;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kegiatan;
+use App\Models\KegiatanNuruljihad;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,7 +11,7 @@ class KegiatanController extends Controller
 {
     public function index()
     {
-        $kegiatan = Kegiatan::orderby('tanggal', 'desc')->get();
+        $kegiatan = KegiatanNuruljihad::orderby('tanggal', 'desc')->get();
         return view('component.adminPage.nurulJihad.kegiatan.index', compact('kegiatan'));
     }
 
@@ -30,34 +30,34 @@ class KegiatanController extends Controller
         ]);
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('kegiatan', 'public');
+            $file = $request->file('gambar')->store('kegiatannuruljihad', 'public');
         }
 
-        Kegiatan::create([
+        KegiatanNuruljihad::create([
             'nama_kegiatan' => $request->input('nama_kegiatan'),
             'tema' => $request->input('tema'),
             'tanggal' => $request->input('tanggal'),
             'gambar' => $file,
         ]);
 
-        return redirect()->route('kegiatan.nuruljihad.admin')->with('status', 'Data berhasil ditambah');
+        return redirect()->route('kegiatan-nuruljihad-admin')->with('status', 'Data berhasil ditambah');
     }
 
     public function edit(Request $request, $id)
     {
-        $kegiatan = Kegiatan::where('id', $id)->first();
-        return view('component.adminpage.nurulJihad.kegiatan.update', compact('kegiatan'));
+        $kegiatan = KegiatanNuruljihad::where('id', $id)->first();
+        return view('component.adminpage.nurulJihad.kegiatan.update', compact('kegiatannuruljihad'));
     }
 
     public function update(Request $request, $id)
     {
-        $kegiatan = Kegiatan::where('id', $id)->first();
+        $kegiatan = KegiatanNuruljihad::where('id', $id)->first();
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('kegiatan', 'public');
+            $file = $request->file('gambar')->store('kegiatannuruljihad', 'public');
             if ($kegiatan->gambar && file_exists(storage_path('app/public/' . $kegiatan->gambar))) {
                 Storage::delete('public/' . $kegiatan->gambar);
-                $file = $request->file('gambar')->store('kegiatan', 'public');
+                $file = $request->file('gambar')->store('kegiatannuruljihad', 'public');
             }
         }
 
@@ -72,12 +72,12 @@ class KegiatanController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('kegiatan.nuruljihad.admin')->with('status', 'Data berhasil diubah');
+        return redirect()->route('kegiatan-nuruljihad-admin')->with('status', 'Data berhasil diubah');
     }
 
     public function delete($id)
     {
-        $delete = Kegiatan::find($id);
+        $delete = KegiatanNuruljihad::find($id);
 
         if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
             Storage::delete('public/' . $delete->gambar);
@@ -85,6 +85,6 @@ class KegiatanController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('kegiatan.nuruljihad.admin')->with('status', 'Data berhasil dihapus');
+        return redirect()->route('kegiatan-nuruljihad-admin')->with('status', 'Data berhasil dihapus');
     }
 }
