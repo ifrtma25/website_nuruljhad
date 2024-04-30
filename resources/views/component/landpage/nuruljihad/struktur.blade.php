@@ -48,7 +48,7 @@
                     </div>
                 @endforeach
             </div> --}}
-            <div class="row align-items-stretch">
+            <div class="row align-items-stretch justify-content-center">
                 @foreach ($strukturnuruljihad as $item)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="post-entry-1 h-100 bg-white text-center">

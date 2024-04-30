@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\landPage;
 
 use App\Http\Controllers\Controller;
+use App\Models\KegiatanIkramnurjihad;
+use App\Models\StrukturIkramnurjihad;
 use Illuminate\Http\Request;
 
 class IkramnurjihadController extends Controller
@@ -14,7 +16,8 @@ class IkramnurjihadController extends Controller
 
     public function struktur()
     {
-        return view('component.landpage.ikramnurjihad.struktur');
+        $struktur = StrukturIkramnurjihad::all();
+        return view('component.landpage.ikramnurjihad.struktur', compact('struktur'));
     }
 
     public function kajian()
@@ -24,6 +27,7 @@ class IkramnurjihadController extends Controller
 
     public function kegiatan()
     {
-        return view('component.landPage.ikramnurjihad.kegiatan');
+        $kegiatan = KegiatanIkramnurjihad::orderby('tanggal', 'desc')->get();
+        return view('component.landPage.ikramnurjihad.kegiatan', compact('kegiatan'));
     }
 }

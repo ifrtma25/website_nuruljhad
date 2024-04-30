@@ -1,5 +1,5 @@
 @extends('layout.landPage')
-@section('title', 'IkramnurJihad')
+@section('title', 'IkramnurJihad - Struktur')
 @section('content')
     @include('includes.landpage.header.ikramnurjihad')
     {{-- <div class="site-section">
@@ -32,37 +32,21 @@
                     <h2 class="text-cursive">Struktur</h2>
                 </div>
             </div>
-            {{-- <div class="row align-items-stretch justify-content-center">
-                @foreach ($pimpinan as $item)
+            <div class="row align-items-stretch justify-content-center">
+                @foreach ($struktur as $item)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="post-entry-1 h-100 bg-white text-center">
-                            <a href="#" class="d-inline-block">
+                            <a href="{{ asset('storage/' . $item->gambar) }}" target="blankspace" class="d-inline-block">
                                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="Image" class="img-fluid">
                             </a>
                             <div class="post-entry-1-contents">
                                 <span class="meta">{{ $item->jabatan }}</span>
                                 <h2>{{ $item->nama }}</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p> --}}
                             </div>
                         </div>
                     </div>
                 @endforeach
-            </div> --}}
-            <div class="row align-items-stretch">
-                {{-- @foreach ($struktur as $item)
-                    <div class="col-lg-4 col-md-6 mb-5">
-                        <div class="post-entry-1 h-100 bg-white text-center">
-                            <a href="#" class="d-inline-block">
-                                <img src="{{ asset('storage/' . $item->gambar) }}" alt="Image" class="img-fluid">
-                            </a>
-                            <div class="post-entry-1-contents">
-                                <span class="meta">{{ $item->jabatan }}</span>
-                                <h2>{{ $item->nama }}</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach --}}
             </div>
         </div>
     </div>

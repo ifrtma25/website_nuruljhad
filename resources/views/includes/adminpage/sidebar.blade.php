@@ -59,7 +59,7 @@
         IkramnurJihad
     </div>
 
-    <li class="nav-item {{ Request::is('ikramnurjihad/kegaitan-admin') ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('ikramnurjihad/kegiatan-admin') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('kegiatan-ikramnurjihad-admin') }}">
             <i class="fas fa-fw fa-book"></i>
             <span>Kegiatan</span>

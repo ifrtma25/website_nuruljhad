@@ -21,14 +21,19 @@
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" placeholder="Nama...">
+                                            <label for="nama_kegiatan">Nama Kegaitan</label>
+                                            <input type="text" class="form-control form-control-user" id="nama_kegiatan"
+                                                name="nama_kegiatan" placeholder="Nama kegiatan...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control form-control-user" id="jabatan"
-                                                name="jabatan" placeholder="Jabatan...">
+                                            <label for="tema">Tema</label>
+                                            <input type="text" class="form-control form-control-user" id="tema"
+                                                name="tema" placeholder="Tema...">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tanggal">Tanggal</label>
+                                            <input type="date" class="form-control form-control-user" id="tanggal"
+                                                name="tanggal" placeholder="Tema...">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>

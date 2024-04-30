@@ -23,14 +23,19 @@
                                         @method('PUT')
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" value="{{ $kegiatan->nama }}">
+                                            <label for="nama_kegiatan">Nama Kegiatan</label>
+                                            <input type="text" class="form-control form-control-user" id="nama_kegiatan"
+                                                name="nama_kegiatan" value="{{ $kegiatan->nama_kegiatan }}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control form-control-user" id="jabatan"
-                                                name="jabatan" value="{{ $kegiatan->jabatan }}">
+                                            <label for="tema">Tema</label>
+                                            <input type="text" class="form-control form-control-user" id="tema"
+                                                name="tema" value="{{ $kegiatan->tema }}">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tanggal">Tanggal</label>
+                                            <input type="text" class="form-control form-control-user" id="tanggal"
+                                                name="tanggal" value="{{ $kegiatan->tanggal }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
