@@ -12,7 +12,7 @@ class StrukturController extends Controller
     public function index()
     {
         $struktur = StrukturNuruljihad::all();
-        return view('component.adminPage.nurulJihad.struktur.index', compact('strukturnuruljihad'));
+        return view('component.adminPage.nurulJihad.struktur.index', compact('struktur'));
     }
 
     public function create()
@@ -44,7 +44,7 @@ class StrukturController extends Controller
     public function edit(Request $request, $id)
     {
         $struktur = StrukturNuruljihad::where('id', $id)->first();
-        return view('component.adminPage.nurulJihad.struktur.update', compact('strukturnuruljihad'));
+        return view('component.adminPage.nurulJihad.struktur.update', compact('struktur'));
     }
 
     public function update(Request $request, $id)

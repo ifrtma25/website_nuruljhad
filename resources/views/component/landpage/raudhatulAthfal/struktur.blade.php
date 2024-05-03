@@ -1,7 +1,7 @@
 @extends('layout.landPage')
-@section('title', 'Masjid Nurul Jihad')
+@section('title', 'Raudhatul Athfal')
 @section('content')
-    @include('includes.landpage.header.nuruljihad')
+    @include('includes.landpage.header.ra_darulistiqamah')
     {{-- <div class="site-section">
         <div class="container">
             <div class="row">
@@ -29,7 +29,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="text-cursive">Struktur Masjid</h2>
+                    <h2 class="text-cursive">Struktur</h2>
                 </div>
             </div>
             {{-- <div class="row align-items-stretch justify-content-center">
@@ -49,7 +49,7 @@
                 @endforeach
             </div> --}}
             <div class="row align-items-stretch justify-content-center">
-                @foreach ($struktur as $item)
+                {{-- @foreach ($struktur as $item)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="post-entry-1 h-100 bg-white text-center">
                             <a href="#" class="d-inline-block">
@@ -58,11 +58,11 @@
                             <div class="post-entry-1-contents">
                                 <span class="meta">{{ $item->jabatan }}</span>
                                 <h2>{{ $item->nama }}</h2>
-                                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p> --}}
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @endforeach --}}
             </div>
         </div>
     </div>

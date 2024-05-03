@@ -33,7 +33,7 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        @foreach ($kajiannuruljihad as $key => $item)
+                        @foreach ($kajian as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>

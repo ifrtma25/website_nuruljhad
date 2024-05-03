@@ -32,7 +32,7 @@
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        @foreach ($strukturnuruljihad as $key => $item)
+                        @foreach ($struktur as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>

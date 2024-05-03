@@ -17,8 +17,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
-                                    <form class="user"
-                                        action="{{ route('update-kajian-nuruljihad-admin', $kajiannuruljihad->id) }}"
+                                    <form class="user" action="{{ route('update-kajian-nuruljihad-admin', $kajian->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
@@ -26,25 +25,25 @@
                                             <label for="nama_penceramah">Nama</label>
                                             <input type="text" class="form-control form-control-user"
                                                 id="nama_penceramah" name="nama_penceramah"
-                                                value="{{ $kajiannuruljihad->nama_penceramah }}">
+                                                value="{{ $kajian->nama_penceramah }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="tema">Tema</label>
                                             <input type="text" class="form-control form-control-user" id="tema"
-                                                name="tema" value="{{ $kajiannuruljihad->tema }}">
+                                                name="tema" value="{{ $kajian->tema }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="tanggal">Tanggal</label>
                                             <input type="date" class="form-control form-control-user" id="tanggal"
-                                                name="tanggal" value="{{ $kajiannuruljihad->tanggal }}">
+                                                name="tanggal" value="{{ $kajian->tanggal }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $kajiannuruljihad->gambar }}">
-                                            @if ($kajiannuruljihad->gambar)
-                                                <img src="{{ asset('storage/' . $kajiannuruljihad->gambar) }}"
-                                                    alt="" width="100px">
+                                                name="gambar" value="{{ $kajian->gambar }}">
+                                            @if ($kajian->gambar)
+                                                <img src="{{ asset('storage/' . $kajian->gambar) }}" alt=""
+                                                    width="100px">
                                             @else
                                                 <p>Gambar tidak tersedia</p>
                                             @endif

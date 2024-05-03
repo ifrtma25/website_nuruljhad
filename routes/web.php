@@ -41,6 +41,7 @@ Route::get('/nurul_jihad/kegiatan', [NurulJihadController::class, 'kegiatan'])->
 Route::get('/nurul_jihad/kontak', [NurulJihadController::class, 'kontak'])->name('nurul_jihad-kontak');
 
 Route::get('/raudhatul_athfal', [RaudhatulAthfalController::class, 'index'])->name('raudhatul_athfal-index');
+Route::get('/raudhatul_athfal/struktur', [RaudhatulAthfalController::class, 'struktur'])->name('raudhatul_athfal-struktur');
 
 Route::get('/tpa_darulIstiqamah', [TPADarulIstiqamahCcontroller::class, 'index'])->name('tpa-index');
 

@@ -22,8 +22,8 @@ class NurulJihadController extends Controller
     public function kajian()
     {
         // $kajiannuruljihad = KajianNuruljihad::latest()->take(3)->get();
-        $kajiannuruljihad = KajianNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
-        return view('component.landPage.nurulJihad.kajian', compact('kajiannuruljihad'));
+        $kajian = KajianNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.kajian', compact('kajian'));
     }
 
     public function penceramah()
@@ -34,15 +34,15 @@ class NurulJihadController extends Controller
 
     public function struktur()
     {
-        $strukturnuruljihad = StrukturNuruljihad::all();
+        $struktur = StrukturNuruljihad::all();
         $pimpinan = StrukturNuruljihad::where('jabatan', 'Pimpinan')->get();
-        return view('component.landPage.nurulJihad.struktur', compact('strukturnuruljihad', 'pimpinan'));
+        return view('component.landPage.nurulJihad.struktur', compact('struktur', 'pimpinan'));
     }
 
     public function kegiatan()
     {
-        $kegiatannuruljihad = KegiatanNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
-        return view('component.landPage.nurulJihad.kegiatan', compact('kegiatannuruljihad'));
+        $kegiatan = KegiatanNuruljihad::orderby('tanggal', 'desc')->take(6)->get();
+        return view('component.landPage.nurulJihad.kegiatan', compact('kegiatan'));
     }
 
     public function kontak()

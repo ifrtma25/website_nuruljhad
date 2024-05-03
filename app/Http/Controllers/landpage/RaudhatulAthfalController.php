@@ -11,4 +11,9 @@ class RaudhatulAthfalController extends Controller
     {
         return view('component.landPage.raudhatulAthfal.index');
     }
+
+    public function struktur()
+    {
+        return view('component.landpage.raudhatulAthfal.struktur');
+    }
 }

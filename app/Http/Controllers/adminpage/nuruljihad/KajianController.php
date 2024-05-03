@@ -12,7 +12,7 @@ class KajianController extends Controller
     public function index()
     {
         $kajian = KajianNuruljihad::orderby('tanggal', 'desc')->get();
-        return view('component.adminPage.nurulJihad.kajian.index', compact('kajiannuruljihad'));
+        return view('component.adminPage.nurulJihad.kajian.index', compact('kajian'));
     }
 
     public function create()
@@ -46,7 +46,7 @@ class KajianController extends Controller
     public function edit(Request $request, $id)
     {
         $kajian = KajianNuruljihad::where('id', $id)->first();
-        return view('component.adminPage.nurulJihad.kajian.update', compact('kajiannuruljihad'));
+        return view('component.adminPage.nurulJihad.kajian.update', compact('kajian'));
     }
 
     public function update(Request $request, $id)
