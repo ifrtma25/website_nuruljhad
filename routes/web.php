@@ -7,6 +7,8 @@ use App\Http\Controllers\adminpage\nuruljihad\KajianController;
 use App\Http\Controllers\adminpage\nuruljihad\KegiatanController;
 use App\Http\Controllers\adminpage\nuruljihad\PenceramahController;
 use App\Http\Controllers\adminpage\nuruljihad\StrukturController;
+use App\Http\Controllers\adminPage\rumahtahfidz\DaftarSantriController;
+use App\Http\Controllers\adminPage\rumahtahfidz\ProgramController;
 use App\Http\Controllers\landpage\DashboardController;
 use App\Http\Controllers\landPage\IkramnurjihadController;
 use App\Http\Controllers\landPage\MajelisTaklimController;
@@ -46,6 +48,10 @@ Route::get('/raudhatul_athfal/struktur', [RaudhatulAthfalController::class, 'str
 Route::get('/tpa_darulIstiqamah', [TPADarulIstiqamahCcontroller::class, 'index'])->name('tpa-index');
 
 Route::get('/rumah_tahfidz', [RumahTahfidzController::class, 'index'])->name('rumah_tahfidz-index');
+Route::get('/rumah_tahfidz/program', [RumahTahfidzController::class, 'program'])->name('rumah_tahfidz-program');
+Route::get('/rumah_tahfidz/daftar_santri', [RumahTahfidzController::class, 'daftar_santri'])->name('rumah_tahfidz-daftar_santri');
+Route::get('/rumah_tahfidz/jadwal', [RumahTahfidzController::class, 'jadwal'])->name('rumah_tahfidz-jadwal');
+Route::get('/rumah_tahfidz/struktur', [RumahTahfidzController::class, 'struktur'])->name('rumah_tahfidz-struktur');
 
 Route::get('/majelis_taklim', [MajelisTaklimController::class, 'index'])->name('majelis_taklim-index');
 
@@ -84,6 +90,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/nurul_jihad/penceramah-admin/edit/{id}', [PenceramahController::class, 'edit'])->name('edit-penceramah-nuruljihad-admin');
     Route::put('/nurul_jihad/penceramah-admin/update/{id}', [PenceramahController::class, 'update'])->name('update-penceramah-nuruljihad-admin');
     Route::delete('/nurul_jihad/penceramah-admin/delete/{id}', [PenceramahController::class, 'delete'])->name('delete-penceramah-nuruljihad-admin');
+
+    Route::get('/rumah_tahfidz/program-admin', [ProgramController::class, 'index'])->name('program-rumah_tahfidz-admin');
+
+    Route::get('/rumah_tahfidz/daftar_santri-admin', [DaftarSantriController::class, 'index'])->name('daftar_santri-rumah_tahfidz-admin');
+    Route::get('/rumah_tahfidz/daftar_santri-admin/create', [DaftarSantriController::class, 'create'])->name('create-daftar_santri-rumah_tahfidz-admin');
+    Route::post('/rumah_tahfidz/daftar_santri-admin/store', [DaftarSantriController::class, 'store'])->name('store-daftar_santri-rumah_tahfidz-admin');
+    Route::get('/rumah_tahfidz/daftar_santri-admin/edit', [DaftarSantriController::class, 'edit'])->name('edit-daftar_santri-rumah_tahfidz-admin');
+    Route::put('/rumah_tahfidz/daftar_santri-admin/update', [DaftarSantriController::class, 'update'])->name('update-daftar_santri-rumah_tahfidz-admin');
+    Route::delete('/rumah_tahfidz/daftar_santri-admin/delete', [DaftarSantriController::class, 'delete'])->name('delete-daftar_santri-rumah_tahfidz-admin');
 
     Route::get('/ikramnurjihad/kegiatan-admin', [IkramnurjihadKegiatanController::class, 'index'])->name('kegiatan-ikramnurjihad-admin');
     Route::get('/ikramnurjihad/kegiatan-admin/create', [IkramnurjihadKegiatanController::class, 'create'])->name('create-kegiatan-ikramnurjihad-admin');

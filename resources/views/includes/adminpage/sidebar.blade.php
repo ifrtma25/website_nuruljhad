@@ -56,6 +56,33 @@
 
     <!-- Heading -->
     <div class="sidebar-heading text-light">
+        Rumah Tahfidz
+    </div>
+
+    <li class="nav-item {{ Request::is('rumah_tahfidz/daftar_santri-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('daftar_santri-rumah_tahfidz-admin') }}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Daftar Santri</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('rumah_tahfidz/program-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('program-rumah_tahfidz-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Program</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('rumah_tahfidz/struktur-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{-- route('') --}}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Struktur</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading text-light">
         IkramnurJihad
     </div>
 
