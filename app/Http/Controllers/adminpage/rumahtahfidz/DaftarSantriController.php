@@ -46,7 +46,7 @@ class DaftarSantriController extends Controller
     public function edit(Request $request, $id)
     {
         $daftarsantri = DaftarSantriTahfidz::where('id', $id)->first();
-        return view('component.adminPage.rumahTahfidz.daftarSantri.update');
+        return view('component.adminPage.rumahTahfidz.daftarSantri.update', compact('daftarsantri'));
     }
 
     public function update(Request $request, $id)

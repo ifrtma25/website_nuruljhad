@@ -28,7 +28,7 @@
                                                 name="nama" value="{{ $penceramah->nama }}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="alamat">Jabatan</label>
+                                            <label for="alamat">Alamat</label>
                                             <input type="text" class="form-control form-control-user" id="alamat"
                                                 name="alamat" value="{{ $penceramah->alamat }}">
                                         </div>

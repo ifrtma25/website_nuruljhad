@@ -17,7 +17,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store-penceramah-nuruljihad-admin') }}"
+                                    <form class="user" action="{{ route('store-daftar_santri-rumah_tahfidz-admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -31,6 +31,11 @@
                                                 name="alamat" placeholder="Alamat...">
                                         </div>
                                         <div class="form-group">
+                                            <label for="tanggal_lahir">Tanggal Lahir</label>
+                                            <input type="date" class="form-control form-control-user" id="tanggal_lahir"
+                                                name="tanggal_lahir" placeholder="Tanggal lahir...">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control form-control-user" id="gambar"
                                                 name="gambar">
@@ -38,7 +43,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('penceramah-nuruljihad-admin') }}"
+                                        <a href="{{ route('daftar_santri-rumah_tahfidz-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

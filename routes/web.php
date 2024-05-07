@@ -96,9 +96,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/rumah_tahfidz/daftar_santri-admin', [DaftarSantriController::class, 'index'])->name('daftar_santri-rumah_tahfidz-admin');
     Route::get('/rumah_tahfidz/daftar_santri-admin/create', [DaftarSantriController::class, 'create'])->name('create-daftar_santri-rumah_tahfidz-admin');
     Route::post('/rumah_tahfidz/daftar_santri-admin/store', [DaftarSantriController::class, 'store'])->name('store-daftar_santri-rumah_tahfidz-admin');
-    Route::get('/rumah_tahfidz/daftar_santri-admin/edit', [DaftarSantriController::class, 'edit'])->name('edit-daftar_santri-rumah_tahfidz-admin');
-    Route::put('/rumah_tahfidz/daftar_santri-admin/update', [DaftarSantriController::class, 'update'])->name('update-daftar_santri-rumah_tahfidz-admin');
-    Route::delete('/rumah_tahfidz/daftar_santri-admin/delete', [DaftarSantriController::class, 'delete'])->name('delete-daftar_santri-rumah_tahfidz-admin');
+    Route::get('/rumah_tahfidz/daftar_santri-admin/edit/{id}', [DaftarSantriController::class, 'edit'])->name('edit-daftar_santri-rumah_tahfidz-admin');
+    Route::put('/rumah_tahfidz/daftar_santri-admin/update/{id}', [DaftarSantriController::class, 'update'])->name('update-daftar_santri-rumah_tahfidz-admin');
+    Route::delete('/rumah_tahfidz/daftar_santri-admin/delete/{id}', [DaftarSantriController::class, 'delete'])->name('delete-daftar_santri-rumah_tahfidz-admin');
 
     Route::get('/ikramnurjihad/kegiatan-admin', [IkramnurjihadKegiatanController::class, 'index'])->name('kegiatan-ikramnurjihad-admin');
     Route::get('/ikramnurjihad/kegiatan-admin/create', [IkramnurjihadKegiatanController::class, 'create'])->name('create-kegiatan-ikramnurjihad-admin');
