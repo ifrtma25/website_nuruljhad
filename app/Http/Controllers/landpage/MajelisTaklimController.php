@@ -11,4 +11,14 @@ class MajelisTaklimController extends Controller
     {
         return view('component.landPage.majelisTaklim.index');
     }
+
+    public function kajian()
+    {
+        return view('component.landPage.majelisTaklim.kajian');
+    }
+
+    public function keanggotaan()
+    {
+        return view('component.landPage.majelisTaklim.keanggotaan');
+    }
 }

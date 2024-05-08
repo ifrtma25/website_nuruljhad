@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Update Data')
+@section('title', 'Tambah Data')
 @section('content')
     <div class="container">
 
@@ -15,43 +15,30 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user"
-                                        action="{{ route('update-daftar_santri-rumah_tahfidz-admin', $daftarsantri->id) }}"
+                                    <form class="user" action="{{ route('store-struktur-rumah_tahfidz-admin') }}"
                                         enctype="multipart/form-data" method="POST">
-                                        @method('PUT')
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
                                             <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" value="{{ $daftarsantri->nama }}">
+                                                name="nama" placeholder="Nama...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="alamat">Alamat</label>
-                                            <input type="text" class="form-control form-control-user" id="alamat"
-                                                name="alamat" value="{{ $daftarsantri->alamat }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tanggal_lahir">Tanggal Lahir</label>
-                                            <input type="date" class="form-control form-control-user" id="tanggal_lahir"
-                                                name="tanggal_lahir" value="{{ $daftarsantri->tanggal_lahir }}">
+                                            <label for="jabatan">Jabatan</label>
+                                            <input type="text" class="form-control form-control-user" id="jabatan"
+                                                name="jabatan" placeholder="Jabatan...">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $daftarsantri->gambar }}">
-                                            @if ($daftarsantri->gambar)
-                                                <img src="{{ asset('storage/' . $daftarsantri->gambar) }}" alt=""
-                                                    width="100px">
-                                            @else
-                                                <p>Gambar tidak tersedia</p>
-                                            @endif
+                                                name="gambar">
                                         </div>
                                         <button class="btn btn-primary btn-user">
-                                            Update Data
+                                            Tambah Data
                                         </button>
-                                        <a href="{{ route('daftar_santri-rumah_tahfidz-admin') }}"
+                                        <a href="{{ route('struktur-rumah_tahfidz-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

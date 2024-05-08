@@ -1,13 +1,12 @@
 @extends('layout.landPage')
-@section('title', 'Rumah Tahfidz')
-@section('header')
+@section('title', 'majelis Taklim')
 @section('content')
-    @include('includes.landPage.header.rumahtahfidz')
+    @include('includes.landPage.header.majelistaklim')
     {{-- <div class="site-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="images/img_2.jpg" alt="Image" class="img-fluid">
+                    <img src="{{ asset('assets/landPage/images/Pesantren.png') }}" alt="Image" class="img-fluid">
                 </div>
                 <div class="col-md-5 ml-auto">
                     <h3 class="text-cursive mb-4">Our Mission</h3>
@@ -30,26 +29,40 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="text-cursive">Daftar Santri</h2>
+                    <h2 class="text-cursive">Keanggotaan</h2>
                 </div>
             </div>
-            <div class="row align-items-stretch justify-content-center">
-
-                {{-- @foreach ($penceramah as $item)
+            {{-- <div class="row align-items-stretch justify-content-center">
+                @foreach ($pimpinan as $item)
                     <div class="col-lg-4 col-md-6 mb-5">
                         <div class="post-entry-1 h-100 bg-white text-center">
-                            <a href="{{ asset('storage/' . $item->gambar) }}" target="blankspace" class="d-inline-block">
+                            <a href="#" class="d-inline-block">
                                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="Image" class="img-fluid">
                             </a>
                             <div class="post-entry-1-contents">
-                                <span class="meta">Founder</span>
+                                <span class="meta">{{ $item->jabatan }}</span>
                                 <h2>{{ $item->nama }}</h2>
-                                <p>{{ $item->alamat }}</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div> --}}
+            <div class="row align-items-stretch justify-content-center">
+                {{-- @foreach ($keanggotaan as $item)
+                    <div class="col-lg-4 col-md-6 mb-5">
+                        <div class="post-entry-1 h-100 bg-white text-center">
+                            <a href="#" class="d-inline-block">
+                                <img src="{{ asset('storage/' . $item->gambar) }}" alt="Image" class="img-fluid">
+                            </a>
+                            <div class="post-entry-1-contents">
+                                <span class="meta">{{ $item->jabatan }}</span>
+                                <h2>{{ $item->nama }}</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
                             </div>
                         </div>
                     </div>
                 @endforeach --}}
-
             </div>
         </div>
     </div>

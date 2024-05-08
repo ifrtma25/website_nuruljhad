@@ -72,7 +72,7 @@
         </a>
     </li>
     <li class="nav-item {{ Request::is('rumah_tahfidz/struktur-admin') ? 'active' : '' }}">
-        <a class="nav-link" href="{{-- route('') --}}">
+        <a class="nav-link" href="{{ route('struktur-rumah_tahfidz-admin') }}">
             <i class="fas fa-fw fa-users"></i>
             <span>Struktur</span>
         </a>

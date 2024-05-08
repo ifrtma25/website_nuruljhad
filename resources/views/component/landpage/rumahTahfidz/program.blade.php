@@ -1,5 +1,5 @@
 @extends('layout.landPage')
-@section('title', 'Masjid Nurul Jihad')
+@section('title', 'Rumah Tahfidz')
 @section('content')
     @include('includes.landPage.header.rumahtahfidz')
     <div class="site-section">

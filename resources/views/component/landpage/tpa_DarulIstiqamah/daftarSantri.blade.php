@@ -1,8 +1,8 @@
 @extends('layout.landPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'TPA Darul Istiqamah')
 @section('header')
 @section('content')
-    @include('includes.landPage.header.rumahtahfidz')
+    @include('includes.landPage.header.tpa_darulistiqamah')
     {{-- <div class="site-section">
         <div class="container">
             <div class="row">

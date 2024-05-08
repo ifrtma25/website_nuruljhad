@@ -1,8 +1,8 @@
 @extends('layout.landPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'Raudhatul Athfal')
 @section('header')
 @section('content')
-    @include('includes.landPage.header.rumahtahfidz')
+    @include('includes.landPage.header.ra_darulistiqamah')
     {{-- <div class="site-section">
         <div class="container">
             <div class="row">
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="text-cursive">Daftar Santri</h2>
+                    <h2 class="text-cursive">Daftar Guru</h2>
                 </div>
             </div>
             <div class="row align-items-stretch justify-content-center">

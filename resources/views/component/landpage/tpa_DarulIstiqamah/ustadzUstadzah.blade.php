@@ -1,13 +1,13 @@
 @extends('layout.landPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'TPA Darul Istiqamah')
 @section('content')
-    @include('includes.landPage.header.rumahtahfidz')
+    @include('includes.landPage.header.tpa_darulistiqamah')
 
     <div class="site-section">
         <div class="container">
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h2 class="text-cursive">Struktur Tahfidz</h2>
+                    <h2 class="text-cursive">Ustadz & Ustadzah</h2>
                 </div>
             </div>
             <div class="row align-items-stretch justify-content-center">

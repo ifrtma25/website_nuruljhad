@@ -55,8 +55,8 @@ class DaftarSantriController extends Controller
 
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('daftarsantri', 'public');
-            if ($daftarsantri->gambar && file_exists(storage_path('app/public/', $daftarsantri->gambar))) {
-                Storage::delete('public/', $daftarsantri->gambar);
+            if ($daftarsantri->gambar && file_exists(storage_path('app/public/' . $daftarsantri->gambar))) {
+                Storage::delete('public/' . $daftarsantri->gambar);
                 $file = $request->file('gambar')->store('daftarsantri', 'public');
             }
         }
@@ -82,5 +82,9 @@ class DaftarSantriController extends Controller
         if ($delete->gambar && file_exists(storage_path('app/public/', $delete->gambar))) {
             Storage::delete('public/', $delete->gambar);
         }
+
+        $delete->delete();
+
+        return redirect()->route('daftar_santri-rumah_tahfidz-admin')->with('status', 'Data berhasil dihapus');
     }
 }

@@ -1,11 +1,11 @@
 @extends('layout.landPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'Majelis Taklim')
 @section('content')
-    @include('includes.landPage.header.rumahtahfidz')
+    @include('includes.landPage.header.majelistaklim')
     <div class="site-section">
         <div class="container">
             <div class="heading-20219 mb-5">
-                <h2 class="title text-cursive">Jadwal</h2>
+                <h2 class="title text-cursive">Kajian</h2>
             </div>
             <div class="row">
                 {{-- @foreach ($kajian as $item)

@@ -12,6 +12,21 @@ class RaudhatulAthfalController extends Controller
         return view('component.landPage.raudhatulAthfal.index');
     }
 
+    public function daftar_siswa()
+    {
+        return view('component.landPage.raudhatulAthfal.daftarSiswa');
+    }
+
+    public function alumni()
+    {
+        return view('component.landPage.raudhatulAthfal.alumni');
+    }
+
+    public function daftar_guru()
+    {
+        return view('component.landPage.raudhatulAthfal.daftarGuru');
+    }
+
     public function struktur()
     {
         return view('component.landpage.raudhatulAthfal.struktur');

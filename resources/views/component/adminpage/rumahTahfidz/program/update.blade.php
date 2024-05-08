@@ -18,40 +18,29 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update-daftar_santri-rumah_tahfidz-admin', $daftarsantri->id) }}"
+                                        action="{{ route('update-program-rumah_tahfidz-admin', $program->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" value="{{ $daftarsantri->nama }}">
+                                            <label for="nama_program">Nama</label>
+                                            <input type="text" class="form-control form-control-user" id="nama_program"
+                                                name="nama_program" value="{{ $program->nama_program }}">
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="alamat">Alamat</label>
                                             <input type="text" class="form-control form-control-user" id="alamat"
-                                                name="alamat" value="{{ $daftarsantri->alamat }}">
+                                                name="alamat" value="{{ $program->alamat }}">
                                         </div>
                                         <div class="form-group">
                                             <label for="tanggal_lahir">Tanggal Lahir</label>
                                             <input type="date" class="form-control form-control-user" id="tanggal_lahir"
-                                                name="tanggal_lahir" value="{{ $daftarsantri->tanggal_lahir }}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="gambar">Gambar</label>
-                                            <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $daftarsantri->gambar }}">
-                                            @if ($daftarsantri->gambar)
-                                                <img src="{{ asset('storage/' . $daftarsantri->gambar) }}" alt=""
-                                                    width="100px">
-                                            @else
-                                                <p>Gambar tidak tersedia</p>
-                                            @endif
-                                        </div>
+                                                name="tanggal_lahir" value="{{ $program->tanggal_lahir }}">
+                                        </div> --}}
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('daftar_santri-rumah_tahfidz-admin') }}"
+                                        <a href="{{ route('program-rumah_tahfidz-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

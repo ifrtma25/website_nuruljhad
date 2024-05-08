@@ -1,4 +1,4 @@
-<header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
+<header class="site-navbar site-navbar-target bg-secondary shadow mt-2" role="banner">
 
     <div class="container-fluid">
         <div class="row align-items-center position-relative">
@@ -12,9 +12,9 @@
             <nav class="site-navigation text-left ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                     <li><a href="{{ route('raudhatul_athfal-index') }}" class="nav-link">Dashboard</a></li>
-                    <li><a href="{{-- route('raudhatul_athfal-daftar_siswa') --}}" class="nav-link">Daftar Siswa</a></li>
-                    <li><a href="{{-- route('raudhatul_athfal-Alumni') --}}" class="nav-link">Alumni</a></li>
-                    <li><a href="{{-- route('raudhatul_athfal-Alumni') --}}" class="nav-link">Daftar Guru</a></li>
+                    <li><a href="{{ route('raudhatul_athfal-daftar_siswa') }}" class="nav-link">Daftar Siswa</a></li>
+                    <li><a href="{{ route('raudhatul_athfal-alumni') }}" class="nav-link">Alumni</a></li>
+                    <li><a href="{{ route('raudhatul_athfal-daftar_guru') }}" class="nav-link">Daftar Guru</a></li>
                     <li><a href="{{ route('raudhatul_athfal-struktur') }}" class="nav-link">Struktur</a></li>
                 </ul>
             </nav>

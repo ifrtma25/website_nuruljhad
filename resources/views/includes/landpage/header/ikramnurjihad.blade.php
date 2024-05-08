@@ -1,4 +1,4 @@
-<header class="site-navbar site-navbar-target bg-secondary shadow" role="banner">
+<header class="site-navbar site-navbar-target bg-secondary shadow mt-2" role="banner">
 
     <div class="container-fluid">
         <div class="row align-items-center position-relative">
