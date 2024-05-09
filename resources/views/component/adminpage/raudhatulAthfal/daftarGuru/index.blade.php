@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Nurul Jihad')
+@section('title', 'Raudhatul Athfal')
 @section('content')
     @if (session('status'))
         <script>
@@ -14,8 +14,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="#">Nurul Jihad</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Penceramah</li>
+                <li class="breadcrumb-item"><a href="#">Raudhatul Athfal</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Daftar Guru</li>
             </ol>
         </nav>
         <!-- Page Heading -->

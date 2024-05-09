@@ -1,14 +1,21 @@
 @extends('layout.adminPage')
-@section('title', 'Tambah Data')
+@section('title', 'Ikramnurjihad')
 @section('content')
-    <div class="container">
-
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#">Ikramnurjihad</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('struktur-ikramnurjihad-admin') }}">Struktur</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
+            </ol>
+        </nav>
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 shadow-lg">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">

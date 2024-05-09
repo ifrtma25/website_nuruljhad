@@ -7,6 +7,7 @@ use App\Http\Controllers\adminpage\nuruljihad\KajianController;
 use App\Http\Controllers\adminpage\nuruljihad\KegiatanController;
 use App\Http\Controllers\adminpage\nuruljihad\PenceramahController;
 use App\Http\Controllers\adminpage\nuruljihad\StrukturController;
+use App\Http\Controllers\adminPage\raudhatulathfal\AlumniController;
 use App\Http\Controllers\adminPage\rumahtahfidz\DaftarSantriController;
 use App\Http\Controllers\adminPage\rumahtahfidz\ProgramController;
 use App\Http\Controllers\adminPage\rumahtahfidz\StrukturController as RumahtahfidzStrukturController;
@@ -122,6 +123,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/rumah_tahfidz/struktur-admin/edit/{id}', [RumahtahfidzStrukturController::class, 'edit'])->name('edit-struktur-rumah_tahfidz-admin');
     Route::put('/rumah_tahfidz/struktur-admin/update/{id}', [RumahtahfidzStrukturController::class, 'update'])->name('update-struktur-rumah_tahfidz-admin');
     Route::delete('/rumah_tahfidz/struktur-admin/delete/{id}', [RumahtahfidzStrukturController::class, 'delete'])->name('delete-struktur-rumah_tahfidz-admin');
+
+    // Raudhatul Athfal
+    Route::get('/raudhatul_athfal/alumni-admin', [AlumniController::class, 'index'])->name('alumni-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/alumni-admin/create', [AlumniController::class, 'create'])->name('create-alumni-raudhatul_athfal-admin');
+    Route::post('/raudhatul_athfal/alumni-admin/store', [AlumniController::class, 'store'])->name('store-alumni-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/alumni-admin/edit/{id}', [AlumniController::class, 'edit'])->name('edit-alumni-raudhatul_athfal-admin');
+    Route::put('/raudhatul_athfal/alumni-admin/update/{id}', [AlumniController::class, 'update'])->name('update-alumni-raudhatul_athfal-admin');
+    Route::delete('/raudhatul_athfal/alumni-admin/delete/{id}', [AlumniController::class, 'delete'])->name('delete-alumni-raudhatul_athfal-admin');
 
     // Ikramnurjihad
     Route::get('/ikramnurjihad/kegiatan-admin', [IkramnurjihadKegiatanController::class, 'index'])->name('kegiatan-ikramnurjihad-admin');

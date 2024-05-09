@@ -83,6 +83,21 @@
 
     <!-- Heading -->
     <div class="sidebar-heading text-light">
+        Raudhatul Athfal
+    </div>
+
+    <li class="nav-item {{ Request::is('raudhatul_athfal/alumni-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('alumni-raudhatul_athfal-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Alumni</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading text-light">
         IkramnurJihad
     </div>
 
