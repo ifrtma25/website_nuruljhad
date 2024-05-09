@@ -35,4 +35,32 @@ class AlumniController extends Controller
 
         return redirect()->route('alumni-raudhatul_athfal-admin')->with('status', 'Data berhasil ditambah');
     }
+
+    public function edit(Request $request, $id)
+    {
+        $alumni = AlumniRA::where('id', $id)->first();
+        return view('component.adminPage.raudhatulAthfal.alumni.update', compact('alumni'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $alumni = AlumniRA::where('id', $id)->first();
+
+        $alumni->update([
+            'nama' => $request->input('nama'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
+            'tahun_lulus' => $request->input('tahun_lulus'),
+        ]);
+
+        return redirect()->route('alumni-raudhatul_athfal-admin')->with('status', 'Data berhasil diupdate');
+    }
+
+    public function delete($id)
+    {
+        $delete = AlumniRA::find($id);
+
+        $delete->delete();
+
+        return redirect()->route('alumni-raudhatul_athfal-admin')->with('status', 'Data berhasil dihapus');
+    }
 }

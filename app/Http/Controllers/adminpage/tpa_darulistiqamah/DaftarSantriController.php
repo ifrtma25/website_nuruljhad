@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\adminPage\rumahtahfidz;
+namespace App\Http\Controllers\adminPage\tpa_darulistiqamah;
 
 use App\Http\Controllers\Controller;
-use App\Models\DaftarSantriTahfidz;
+use App\Models\DaftarSantriTPA;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,13 +11,13 @@ class DaftarSantriController extends Controller
 {
     public function index()
     {
-        $daftarsantri = DaftarSantriTahfidz::orderby('nama', 'asc')->get();
-        return view('component.adminPage.rumahTahfidz.daftarSantri.index', compact('daftarsantri'));
+        $daftarsantri = DaftarSantriTPA::orderby('nama', 'asc')->get();
+        return view('component.adminPage.tpa_darulIstiqamah.daftarSantri.index', compact('daftarsantri'));
     }
 
     public function create()
     {
-        return view('component.adminPage.rumahTahfidz.daftarSantri.create');
+        return view('component.adminPage.tpa_darulIstiqamah.daftarSantri.create');
     }
 
     public function store(Request $request)
@@ -30,34 +30,34 @@ class DaftarSantriController extends Controller
         ]);
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('daftarsantritahfidz', 'public');
+            $file = $request->file('gambar')->store('daftarsantri_tpa', 'public');
         }
 
-        DaftarSantriTahfidz::create([
+        DaftarSantriTPA::create([
             'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),
             'tanggal_lahir' => $request->input('tanggal_lahir'),
             'gambar' => $file,
         ]);
 
-        return redirect()->route('daftar_santri-rumah_tahfidz-admin')->with('status', 'Data berhasil ditambah');
+        return redirect()->route('daftar_santri-tpa_darulistiqamah-admin')->with('status', 'Data berhasil ditambah');
     }
 
     public function edit(Request $request, $id)
     {
-        $daftarsantri = DaftarSantriTahfidz::where('id', $id)->first();
-        return view('component.adminPage.rumahTahfidz.daftarSantri.update', compact('daftarsantri'));
+        $daftarsantri = DaftarSantriTPA::where('id', $id)->first();
+        return view('component.adminPage.tpa_darulIstiqamah.daftarSantri.update', compact('daftarsantri'));
     }
 
     public function update(Request $request, $id)
     {
-        $daftarsantri = DaftarSantriTahfidz::where('id', $id)->first();
+        $daftarsantri = DaftarSantriTPA::where('id', $id)->first();
 
         if ($request->file('gambar')) {
-            $file = $request->file('gambar')->store('daftarsantritahfidz', 'public');
+            $file = $request->file('gambar')->store('daftarsantri_tpa', 'public');
             if ($daftarsantri->gambar && file_exists(storage_path('app/public/' . $daftarsantri->gambar))) {
                 Storage::delete('public/' . $daftarsantri->gambar);
-                $file = $request->file('gambar')->store('daftarsantritahfidz', 'public');
+                $file = $request->file('gambar')->store('daftarsantri_tpa', 'public');
             }
         }
 
@@ -72,12 +72,12 @@ class DaftarSantriController extends Controller
             'gambar' => $file,
         ]);
 
-        return redirect()->route('daftar_santri-rumah_tahfidz-admin')->with('status', 'Data berhasil diupdate');
+        return redirect()->route('daftar_santri-tpa_darulistiqamah-admin')->with('status', 'Data berhasil diupdate');
     }
 
     public function delete($id)
     {
-        $delete = DaftarSantriTahfidz::find($id);
+        $delete = DaftarSantriTPA::find($id);
 
         if ($delete->gambar && file_exists(storage_path('app/public/', $delete->gambar))) {
             Storage::delete('public/', $delete->gambar);
@@ -85,6 +85,6 @@ class DaftarSantriController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('daftar_santri-rumah_tahfidz-admin')->with('status', 'Data berhasil dihapus');
+        return redirect()->route('daftar_santri-tpa_darulistiqamah-admin')->with('status', 'Data berhasil dihapus');
     }
 }

@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Raudhatul Athfal')
+@section('title', 'TPA Darul Istiqamah')
 @section('content')
     @if (session('status'))
         <script>
@@ -14,17 +14,18 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="#">Raudhatul Athfal</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Daftar Guru</li>
+                <li class="breadcrumb-item"><a href="#">TPA Darul Istiqamah</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Daftar Santri</li>
             </ol>
         </nav>
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Daftar Guru</h1>
+        <h1 class="h3 mb-2 text-gray-800">Daftar Santri</h1>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{ route('create-daftar_guru-raudhatul_athfal-admin') }}" class="btn btn-primary">Tambah Data</a>
+                <a href="{{ route('create-daftar_santri-tpa_darulistiqamah-admin') }}" class="btn btn-primary">Tambah
+                    Data</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -34,27 +35,27 @@
                                 <th>No.</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
-                                <th>Pendidikan</th>
+                                <th>Tanggal Lahir</th>
                                 <th>Gambar</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        @foreach ($daftarguru as $key => $item)
+                        @foreach ($daftarsantri as $key => $item)
                             <tbody>
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->alamat }}</td>
-                                    <td>{{ $item->pendidikan }}</td>
+                                    <td>{{ $item->tanggal_lahir }}</td>
                                     <td><img src="{{ asset('storage/' . $item->gambar) }}" alt="" width="150px">
                                     </td>
                                     <td>
                                         <div class="form-buttom-action">
-                                            <a href="{{ route('edit-daftar_guru-raudhatul_athfal-admin', $item->id) }}"
+                                            <a href="{{ route('edit-daftar_santri-tpa_darulistiqamah-admin', $item->id) }}"
                                                 data-toggle="tooltip" title="Update" class="btn btn-primary"
                                                 data-original-title="Update"><i class="fa fa-edit"></i></a>
                                             <form
-                                                action="{{ route('delete-daftar_guru-raudhatul_athfal-admin', $item->id) }}"
+                                                action="{{ route('delete-daftar_santri-tpa_darulistiqamah-admin', $item->id) }}"
                                                 method="POST" onsubmit="return confirm('Yakin?')" style="display: inline">
                                                 @csrf
                                                 @method('DELETE')

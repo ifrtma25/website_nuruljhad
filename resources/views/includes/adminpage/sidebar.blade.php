@@ -92,6 +92,72 @@
             <span>Alumni</span>
         </a>
     </li>
+    <li class="nav-item {{ Request::is('raudhatul_athfal/daftar_guru-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('daftar_guru-raudhatul_athfal-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Daftar Guru</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('raudhatul_athfal/daftar_siswa-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('daftar_siswa-raudhatul_athfal-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Daftar Siswa</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('raudhatul_athfal/struktur-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('struktur-raudhatul_athfal-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Struktur</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading text-light">
+        TPA Darul Istiqamah
+    </div>
+
+    <li class="nav-item {{ Request::is('tpa_darulistiqamah/daftar_santri-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('daftar_santri-tpa_darulistiqamah-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Daftar Santri</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('tpa_darulistiqamah/daftar_santri-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('ustadz_ustadzah-tpa_darulistiqamah-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Ustadz / Ustadzah</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('tpa_darulistiqamah/daftar_santri-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('wisudawan-tpa_darulistiqamah-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Wisudawan</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading text-light">
+        Majelis Taklim
+    </div>
+
+    <li class="nav-item {{ Request::is('majelis_taklim/kajian-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('kajian-majelis_taklim-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Kajian</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('majelis_taklim/keanggotaan-admin') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('keanggotaan-majelis_taklim-admin') }}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Keanggotaan</span>
+        </a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

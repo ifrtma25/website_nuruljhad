@@ -1,5 +1,5 @@
 @extends('layout.adminPage')
-@section('title', 'Daftar Santri')
+@section('title', 'Rumah Tahfidz')
 @section('content')
     @if (session('status'))
         <script>
@@ -11,7 +11,13 @@
         </script>
     @endif
     <div class="container-fluid">
-
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#">Rumah Tahfidz</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Daftar Santri</li>
+            </ol>
+        </nav>
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Daftar Santri</h1>
 

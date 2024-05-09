@@ -1,13 +1,13 @@
 @extends('layout.adminPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'Majelis Taklim')
 @section('content')
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="#">Rumah Tahfidz</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('daftar_santri-rumah_tahfidz-admin') }}">Daftar Santri</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
+                <li class="breadcrumb-item"><a href="#">Majelis Taklim</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('kajian-majelis_taklim-admin') }}">Kajian</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Upload Kajian</li>
             </ol>
         </nav>
         <!-- Outer Row -->
@@ -22,25 +22,25 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Upload Kajian</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store-daftar_santri-rumah_tahfidz-admin') }}"
+                                    <form class="user" action="{{ route('store-kajian-majelis_taklim-admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="nama">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" placeholder="Nama...">
+                                            <label for="nama_penceramah">Nama</label>
+                                            <input type="text" class="form-control form-control-user"
+                                                id="nama_penceramah" name="nama_penceramah" placeholder="Nama...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="alamat">Alamat</label>
-                                            <input type="text" class="form-control form-control-user" id="alamat"
-                                                name="alamat" placeholder="Alamat...">
+                                            <label for="tema">Tema</label>
+                                            <input type="text" class="form-control form-control-user" id="tema"
+                                                name="tema" placeholder="Tema...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="tanggal_lahir">Tanggal Lahir</label>
-                                            <input type="date" class="form-control form-control-user" id="tanggal_lahir"
-                                                name="tanggal_lahir" placeholder="Tanggal lahir...">
+                                            <label for="tanggal">Tanggal</label>
+                                            <input type="date" class="form-control form-control-user" id="tanggal"
+                                                name="tanggal">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
@@ -50,7 +50,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('daftar_santri-rumah_tahfidz-admin') }}"
+                                        <a href="{{ route('kajian-majelis_taklim-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

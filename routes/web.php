@@ -3,14 +3,22 @@
 use App\Http\Controllers\adminpage\DashboardController as AdminpageDashboardController;
 use App\Http\Controllers\adminpage\ikramnurjihad\KegiatanController as IkramnurjihadKegiatanController;
 use App\Http\Controllers\adminpage\ikramnurjihad\StrukturController as IkramnurjihadStrukturController;
+use App\Http\Controllers\adminPage\majelistaklim\KajianController as MajelistaklimKajianController;
+use App\Http\Controllers\adminPage\majelistaklim\KeanggotaanController;
 use App\Http\Controllers\adminpage\nuruljihad\KajianController;
 use App\Http\Controllers\adminpage\nuruljihad\KegiatanController;
 use App\Http\Controllers\adminpage\nuruljihad\PenceramahController;
 use App\Http\Controllers\adminpage\nuruljihad\StrukturController;
 use App\Http\Controllers\adminPage\raudhatulathfal\AlumniController;
+use App\Http\Controllers\adminPage\raudhatulathfal\DaftarGuruController;
+use App\Http\Controllers\adminPage\raudhatulathfal\DaftarSiswaController;
+use App\Http\Controllers\adminPage\raudhatulathfal\StrukturController as RaudhatulathfalStrukturController;
 use App\Http\Controllers\adminPage\rumahtahfidz\DaftarSantriController;
 use App\Http\Controllers\adminPage\rumahtahfidz\ProgramController;
 use App\Http\Controllers\adminPage\rumahtahfidz\StrukturController as RumahtahfidzStrukturController;
+use App\Http\Controllers\adminPage\tpa_darulistiqamah\DaftarSantriController as Tpa_darulistiqamahDaftarSantriController;
+use App\Http\Controllers\adminPage\tpa_darulistiqamah\UstadzUstadzahController;
+use App\Http\Controllers\adminPage\tpa_darulistiqamah\WisudawanController;
 use App\Http\Controllers\landpage\DashboardController;
 use App\Http\Controllers\landPage\IkramnurjihadController;
 use App\Http\Controllers\landPage\MajelisTaklimController;
@@ -131,6 +139,64 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/raudhatul_athfal/alumni-admin/edit/{id}', [AlumniController::class, 'edit'])->name('edit-alumni-raudhatul_athfal-admin');
     Route::put('/raudhatul_athfal/alumni-admin/update/{id}', [AlumniController::class, 'update'])->name('update-alumni-raudhatul_athfal-admin');
     Route::delete('/raudhatul_athfal/alumni-admin/delete/{id}', [AlumniController::class, 'delete'])->name('delete-alumni-raudhatul_athfal-admin');
+
+    Route::get('/raudhatul_athfal/daftar_guru-admin', [DaftarGuruController::class, 'index'])->name('daftar_guru-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/daftar_guru-admin/create', [DaftarGuruController::class, 'create'])->name('create-daftar_guru-raudhatul_athfal-admin');
+    Route::post('/raudhatul_athfal/daftar_guru-admin/store', [DaftarGuruController::class, 'store'])->name('store-daftar_guru-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/daftar_guru-admin/edit/{id}', [DaftarGuruController::class, 'edit'])->name('edit-daftar_guru-raudhatul_athfal-admin');
+    Route::put('/raudhatul_athfal/daftar_guru-admin/update/{id}', [DaftarGuruController::class, 'update'])->name('update-daftar_guru-raudhatul_athfal-admin');
+    Route::delete('/raudhatul_athfal/daftar_guru-admin/delete/{id}', [DaftarGuruController::class, 'delete'])->name('delete-daftar_guru-raudhatul_athfal-admin');
+
+    Route::get('/raudhatul_athfal/daftar_siswa-admin', [DaftarSiswaController::class, 'index'])->name('daftar_siswa-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/daftar_siswa-admin/create', [DaftarSiswaController::class, 'create'])->name('create-daftar_siswa-raudhatul_athfal-admin');
+    Route::post('/raudhatul_athfal/daftar_siswa-admin/store', [DaftarSiswaController::class, 'store'])->name('store-daftar_siswa-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/daftar_siswa-admin/edit/{id}', [DaftarSiswaController::class, 'edit'])->name('edit-daftar_siswa-raudhatul_athfal-admin');
+    Route::put('/raudhatul_athfal/daftar_siswa-admin/update/{id}', [DaftarSiswaController::class, 'update'])->name('update-daftar_siswa-raudhatul_athfal-admin');
+    Route::delete('/raudhatul_athfal/daftar_siswa-admin/delete/{id}', [DaftarSiswaController::class, 'delete'])->name('delete-daftar_siswa-raudhatul_athfal-admin');
+
+    Route::get('/raudhatul_athfal/struktur-admin', [RaudhatulathfalStrukturController::class, 'index'])->name('struktur-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/struktur-admin/create', [RaudhatulathfalStrukturController::class, 'create'])->name('create-struktur-raudhatul_athfal-admin');
+    Route::post('/raudhatul_athfal/struktur-admin/store', [RaudhatulathfalStrukturController::class, 'store'])->name('store-struktur-raudhatul_athfal-admin');
+    Route::get('/raudhatul_athfal/struktur-admin/edit/{id}', [RaudhatulathfalStrukturController::class, 'edit'])->name('edit-struktur-raudhatul_athfal-admin');
+    Route::put('/raudhatul_athfal/struktur-admin/update/{id}', [RaudhatulathfalStrukturController::class, 'update'])->name('update-struktur-raudhatul_athfal-admin');
+    Route::delete('/raudhatul_athfal/struktur-admin/delete/{id}', [RaudhatulathfalStrukturController::class, 'delete'])->name('delete-struktur-raudhatul_athfal-admin');
+
+    // TPA Darul Istiqamah
+    Route::get('/tpa_darulistiqamah/daftar_santri-admin', [Tpa_darulistiqamahDaftarSantriController::class, 'index'])->name('daftar_santri-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/daftar_santri-admin/create', [Tpa_darulistiqamahDaftarSantriController::class, 'create'])->name('create-daftar_santri-tpa_darulistiqamah-admin');
+    Route::post('/tpa_darulistiqamah/daftar_santri-admin/store', [Tpa_darulistiqamahDaftarSantriController::class, 'store'])->name('store-daftar_santri-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/daftar_santri-admin/edit/{id}', [Tpa_darulistiqamahDaftarSantriController::class, 'edit'])->name('edit-daftar_santri-tpa_darulistiqamah-admin');
+    Route::put('/tpa_darulistiqamah/daftar_santri-admin/update/{id}', [Tpa_darulistiqamahDaftarSantriController::class, 'update'])->name('update-daftar_santri-tpa_darulistiqamah-admin');
+    Route::delete('/tpa_darulistiqamah/daftar_santri-admin/delete/{id}', [Tpa_darulistiqamahDaftarSantriController::class, 'delete'])->name('delete-daftar_santri-tpa_darulistiqamah-admin');
+
+    Route::get('/tpa_darulistiqamah/ustadz_ustadzah-admin', [UstadzUstadzahController::class, 'index'])->name('ustadz_ustadzah-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/ustadz_ustadzah-admin/create', [UstadzUstadzahController::class, 'create'])->name('create-ustadz_ustadzah-tpa_darulistiqamah-admin');
+    Route::post('/tpa_darulistiqamah/ustadz_ustadzah-admin/store', [UstadzUstadzahController::class, 'store'])->name('store-ustadz_ustadzah-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/ustadz_ustadzah-admin/edit/{id}', [UstadzUstadzahController::class, 'edit'])->name('edit-ustadz_ustadzah-tpa_darulistiqamah-admin');
+    Route::put('/tpa_darulistiqamah/ustadz_ustadzah-admin/update/{id}', [UstadzUstadzahController::class, 'update'])->name('update-ustadz_ustadzah-tpa_darulistiqamah-admin');
+    Route::delete('/tpa_darulistiqamah/ustadz_ustadzah-admin/delete/{id}', [UstadzUstadzahController::class, 'delete'])->name('delete-ustadz_ustadzah-tpa_darulistiqamah-admin');
+
+    Route::get('/tpa_darulistiqamah/wisudawan-admin', [WisudawanController::class, 'index'])->name('wisudawan-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/wisudawan-admin/create', [WisudawanController::class, 'create'])->name('create-wisudawan-tpa_darulistiqamah-admin');
+    Route::post('/tpa_darulistiqamah/wisudawan-admin/store', [WisudawanController::class, 'store'])->name('store-wisudawan-tpa_darulistiqamah-admin');
+    Route::get('/tpa_darulistiqamah/wisudawan-admin/edit/{id}', [WisudawanController::class, 'edit'])->name('edit-wisudawan-tpa_darulistiqamah-admin');
+    Route::put('/tpa_darulistiqamah/wisudawan-admin/update/{id}', [WisudawanController::class, 'update'])->name('update-wisudawan-tpa_darulistiqamah-admin');
+    Route::delete('/tpa_darulistiqamah/wisudawan-admin/delete/{id}', [WisudawanController::class, 'delete'])->name('delete-wisudawan-tpa_darulistiqamah-admin');
+
+    // Majelis Taklim
+    Route::get('/majelis_taklim/kajian-admin', [MajelistaklimKajianController::class, 'index'])->name('kajian-majelis_taklim-admin');
+    Route::get('/majelis_taklim/kajian-admin/create', [MajelistaklimKajianController::class, 'create'])->name('create-kajian-majelis_taklim-admin');
+    Route::post('/majelis_taklim/kajian-admin/store', [MajelistaklimKajianController::class, 'store'])->name('store-kajian-majelis_taklim-admin');
+    Route::get('/majelis_taklim/kajian-admin/edit/{id}', [MajelistaklimKajianController::class, 'edit'])->name('edit-kajian-majelis_taklim-admin');
+    Route::put('/majelis_taklim/kajian-admin/update/{id}', [MajelistaklimKajianController::class, 'update'])->name('update-kajian-majelis_taklim-admin');
+    Route::delete('/majelis_taklim/kajian-admin/delete/{id}', [MajelistaklimKajianController::class, 'delete'])->name('delete-kajian-majelis_taklim-admin');
+
+    Route::get('/majelis_taklim/keanggotaan-admin', [KeanggotaanController::class, 'index'])->name('keanggotaan-majelis_taklim-admin');
+    Route::get('/majelis_taklim/keanggotaan-admin/create', [KeanggotaanController::class, 'create'])->name('create-keanggotaan-majelis_taklim-admin');
+    Route::post('/majelis_taklim/keanggotaan-admin/store', [KeanggotaanController::class, 'store'])->name('store-keanggotaan-majelis_taklim-admin');
+    Route::get('/majelis_taklim/keanggotaan-admin/edit/{id}', [KeanggotaanController::class, 'edit'])->name('edit-keanggotaan-majelis_taklim-admin');
+    Route::put('/majelis_taklim/keanggotaan-admin/update/{id}', [KeanggotaanController::class, 'update'])->name('update-keanggotaan-majelis_taklim-admin');
+    Route::delete('/majelis_taklim/keanggotaan-admin/delete/{id}', [KeanggotaanController::class, 'delete'])->name('delete-keanggotaan-majelis_taklim-admin');
 
     // Ikramnurjihad
     Route::get('/ikramnurjihad/kegiatan-admin', [IkramnurjihadKegiatanController::class, 'index'])->name('kegiatan-ikramnurjihad-admin');
