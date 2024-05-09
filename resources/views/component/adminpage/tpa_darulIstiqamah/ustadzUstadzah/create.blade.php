@@ -1,12 +1,13 @@
 @extends('layout.adminPage')
-@section('title', 'Rumah Tahfidz')
+@section('title', 'TPA Darul Istiqamah')
 @section('content')
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="#">Rumah Tahfidz</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('struktur-rumah_tahfidz-admin') }}">Struktur</a></li>
+                <li class="breadcrumb-item"><a href="#">TPA Darul Istiqamah</a></li>
+                <li class="breadcrumb-item"><a
+                        href="{{ route('ustadz_ustadzah-tpa_darulistiqamah-admin') }}">Ustadz&Ustadzah</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
             </ol>
         </nav>
@@ -24,7 +25,8 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Tambah Data</h1>
                                     </div>
-                                    <form class="user" action="{{ route('store-struktur-rumah_tahfidz-admin') }}"
+                                    <form class="user"
+                                        action="{{ route('store-ustadz_ustadzah-tpa_darulistiqamah-admin') }}"
                                         enctype="multipart/form-data" method="POST">
                                         @csrf
                                         <div class="form-group">
@@ -33,9 +35,9 @@
                                                 name="nama" placeholder="Nama...">
                                         </div>
                                         <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control form-control-user" id="jabatan"
-                                                name="jabatan" placeholder="Jabatan...">
+                                            <label for="alamat">Alamat</label>
+                                            <input type="text" class="form-control form-control-user" id="alamat"
+                                                name="alamat" placeholder="Alamat...">
                                         </div>
                                         <div class="form-group">
                                             <label for="gambar">Gambar</label>
@@ -45,7 +47,7 @@
                                         <button class="btn btn-primary btn-user">
                                             Tambah Data
                                         </button>
-                                        <a href="{{ route('struktur-rumah_tahfidz-admin') }}"
+                                        <a href="{{ route('ustadz_ustadzah-tpa_darulistiqamah-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>

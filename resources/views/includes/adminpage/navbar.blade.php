@@ -1,87 +1,90 @@
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+<div class="main-header">
+    <!-- Logo Header -->
+    <div class="logo-header" data-background-color="blue">
 
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
-
-    <h3 class="text-success">Yayasan Pesantren Darul Istiqamah Cabang Manggarupi</h3>
-    {{-- <!-- Topbar Search -->
-    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-        <div class="input-group">
-            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                aria-label="Search" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                </button>
-            </div>
+        <a href="{{ route('dashboard_landpage') }}" class="logo">
+            {{-- <img src="{{ asset('assets/landpage/images/Pesantren.png') }}" width="20px" alt="navbar brand"
+                class="navbar-brand"> --}}
+            <h3 style="display: inline-block" class="text-light">Darul Istiqamah</h3>
+        </a>
+        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="icon-menu"></i>
+            </span>
+        </button>
+        <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+                <i class="icon-menu"></i>
+            </button>
         </div>
-    </form> --}}
+    </div>
+    <!-- End Logo Header -->
 
-    <!-- Topbar Navbar -->
-    <ul class="navbar-nav ml-auto">
+    <!-- Navbar Header -->
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
 
-        {{-- <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-        <li class="nav-item dropdown no-arrow d-sm-none">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-            </a>
-            <!-- Dropdown - Messages -->
-            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
+        <div class="container-fluid">
+            {{-- <div class="collapse" id="search-nav">
+                <form class="navbar-left navbar-form nav-search mr-md-3">
                     <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                            aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
+                        <div class="input-group-prepend">
+                            <button type="submit" class="btn btn-search pr-1">
+                                <i class="fa fa-search search-icon"></i>
                             </button>
                         </div>
+                        <input type="text" placeholder="Search ..." class="form-control">
                     </div>
                 </form>
-            </div>
-        </li> --}}
+            </div> --}}
+            <h2 class="text-light">Yayasan Pesantren Darul Istiqamah Cabang Manggarupi</h2>
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 
-        <div class="topbar-divider d-none d-sm-block"></div>
+                <li class="nav-item dropdown hidden-caret">
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <div class="avatar-sm">
+                            <img src="{{ asset('assets/adminpages/img/profile.jpg') }}" alt="..."
+                                class="avatar-img rounded-circle">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user animated fadeIn">
+                        <div class="dropdown-user-scroll scrollbar-outer">
+                            <li>
+                                <div class="user-box">
+                                    <div class="avatar-lg"><img src="{{ asset('assets/adminpages/img/profile.jpg') }}"
+                                            alt="image profile" class="avatar-img rounded"></div>
+                                    <div class="u-text">
+                                        <h4>{{ Auth::user()->name }}</h4>
+                                        <p class="text-muted">{{ Auth::user()->email }}</p><a
+                                            href="{{ route('ikramnurjihad-index') }}"
+                                            class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">My Profile</a>
+                                <a class="dropdown-item" href="#">My Balance</a>
+                                <a class="dropdown-item" href="#">Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
 
-        <!-- Nav Item - User Information -->
-        <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-                <img class="img-profile rounded-circle" src="{{ asset('admin/img/undraw_profile.svg') }}">
-            </a>
-            <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Settings
-                </a>
-                <div class="dropdown-divider"></div>
-                {{-- <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Logout
-                </a> --}}
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                    onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                    {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </li>
-
-    </ul>
-
-</nav>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+</div>

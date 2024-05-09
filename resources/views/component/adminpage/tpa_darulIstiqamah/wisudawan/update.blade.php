@@ -1,12 +1,12 @@
 @extends('layout.adminPage')
-@section('title', 'Update Data')
+@section('title', 'TPA Darul Istiqamah')
 @section('content')
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard-admin') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="#">Rumah Tahfidz</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('struktur-rumah_tahfidz-admin') }}">Struktur</a></li>
+                <li class="breadcrumb-item"><a href="#">TPA Darul Istiqamah</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('wisudawan-tpa_darulistiqamah-admin') }}">Wisudawan</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Update Data</li>
             </ol>
         </nav>
@@ -25,35 +25,32 @@
                                         <h1 class="h4 text-gray-900 mb-4">Update Data</h1>
                                     </div>
                                     <form class="user"
-                                        action="{{ route('update-struktur-rumah_tahfidz-admin', $struktur->id) }}"
+                                        action="{{ route('update-wisudawan-tpa_darulistiqamah-admin', $wisudawan->id) }}"
                                         enctype="multipart/form-data" method="POST">
                                         @method('PUT')
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
                                             <input type="text" class="form-control form-control-user" id="nama"
-                                                name="nama" value="{{ $struktur->nama }}">
+                                                name="nama" value="{{ $wisudawan->nama }}">
                                         </div>
                                         <div class="form-group">
-                                            <label for="jabatan">Jabatan</label>
-                                            <input type="text" class="form-control form-control-user" id="jabatan"
-                                                name="jabatan" value="{{ $struktur->jabatan }}">
+                                            <label for="jenis_kelamin">Jenis Kelamin</label>
+                                            <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+                                                <option selected>{{ $wisudawan->jenis_kelamin }}</option>
+                                                <option value="Laki-Laki">Laki-Laki</option>
+                                                <option value="Perempuan">Perempuan</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="gambar">Gambar</label>
-                                            <input type="file" class="form-control form-control-user" id="gambar"
-                                                name="gambar" value="{{ $struktur->gambar }}">
-                                            @if ($struktur->gambar)
-                                                <img src="{{ asset('storage/' . $struktur->gambar) }}" alt=""
-                                                    width="100px">
-                                            @else
-                                                <p>Gambar tidak tersedia</p>
-                                            @endif
+                                            <label for="tahun_wisuda">Tahun Wisuda</label>
+                                            <input type="text" class="form-control form-control-user" id="tahun_wisuda"
+                                                name="tahun_wisuda" value="{{ $wisudawan->tahun_wisuda }}">
                                         </div>
                                         <button class="btn btn-primary btn-user">
                                             Update Data
                                         </button>
-                                        <a href="{{ route('struktur-rumah_tahfidz-admin') }}"
+                                        <a href="{{ route('wisudawan-tpa_darulistiqamah-admin') }}"
                                             class="btn btn-danger btn-user">Batal</a>
                                     </form>
                                 </div>
