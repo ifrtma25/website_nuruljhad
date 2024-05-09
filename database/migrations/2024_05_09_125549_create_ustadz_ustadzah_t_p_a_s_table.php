@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('ustadz_ustadzah_t_p_a_s', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('alamat');
+            $table->string('gambar');
             $table->timestamps();
         });
     }

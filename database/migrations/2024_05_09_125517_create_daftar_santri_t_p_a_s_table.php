@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('daftar_santri_t_p_a_s', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('alamat');
+            $table->string('tanggal_lahir');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
