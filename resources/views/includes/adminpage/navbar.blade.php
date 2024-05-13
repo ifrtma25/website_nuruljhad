@@ -38,7 +38,7 @@
                     </div>
                 </form>
             </div> --}}
-            <h2 class="text-light">Yayasan Pesantren Darul Istiqamah Cabang Manggarupi</h2>
+            {{-- <h2 class="text-light">Yayasan Pesantren Darul Istiqamah Cabang Manggarupi</h2> --}}
             <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 
                 <li class="nav-item dropdown hidden-caret">
