@@ -55,7 +55,7 @@ class KegiatanController extends Controller
 
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('kegiatanikramnurjihad', 'public');
-            if ($kegiatan->gambar && file_exists(storage_path('app/public' . $kegiatan->gambar))) {
+            if ($kegiatan->gambar && file_exists(storage_path('app/public/' . $kegiatan->gambar))) {
                 Storage::delete('public/' . $kegiatan->gambar);
                 $file = $request->file('gamabr')->store('kegaitanikramnurjihad', 'public');
             }
@@ -79,8 +79,8 @@ class KegiatanController extends Controller
     {
         $delete = KegiatanIkramnurjihad::find($id);
 
-        if ($delete->gambar && file_exists(storage_path('app/public' . $delete->gambar))) {
-            Storage::delete('public' . $delete->gambar);
+        if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
+            Storage::delete('public/' . $delete->gambar);
         }
 
         $delete->delete();

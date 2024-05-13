@@ -76,7 +76,7 @@ class UstadzUstadzahController extends Controller
     {
         $delete = UstadzUstadzahTPA::find($id);
 
-        if ($delete->gambar && file_exists(storage_path('app/public' . $delete->gambar))) {
+        if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
             Storage::delete('public/' . $delete->gambar);
         }
 

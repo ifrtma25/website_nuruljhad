@@ -10,7 +10,7 @@ class AlumniController extends Controller
 {
     public function index()
     {
-        $alumni = AlumniRA::all();
+        $alumni = AlumniRA::orderby('tahun_lulus', 'desc')->get();
         return view('component.adminPage.raudhatulAthfal.alumni.index', compact('alumni'));
     }
 

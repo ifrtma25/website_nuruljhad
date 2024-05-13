@@ -53,7 +53,7 @@ class PenceramahController extends Controller
 
         if ($request->file('gambar')) {
             $file = $request->file('gambar')->store('penceramah', 'public');
-            if ($penceramah->gambar && file_exists(storage_path('app/public' . $penceramah->gambar))) {
+            if ($penceramah->gambar && file_exists(storage_path('app/public/' . $penceramah->gambar))) {
                 Storage::delete('public/' . $penceramah->gambar);
                 $file = $request->file('gambar')->store('penceramah', 'public');
             }
@@ -76,7 +76,7 @@ class PenceramahController extends Controller
     {
         $delete = Penceramah::find($id);
 
-        if ($delete->gambar && file_exists(storage_path('app/public' . $delete->gambar))) {
+        if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
             Storage::delete('public/' . $delete->gambar);
         }
 

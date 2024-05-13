@@ -79,8 +79,8 @@ class DaftarSantriController extends Controller
     {
         $delete = DaftarSantriTPA::find($id);
 
-        if ($delete->gambar && file_exists(storage_path('app/public/', $delete->gambar))) {
-            Storage::delete('public/', $delete->gambar);
+        if ($delete->gambar && file_exists(storage_path('app/public/' . $delete->gambar))) {
+            Storage::delete('public/' . $delete->gambar);
         }
 
         $delete->delete();

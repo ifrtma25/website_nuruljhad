@@ -10,7 +10,7 @@ class WisudawanController extends Controller
 {
     public function index()
     {
-        $wisudawan = WisudawanTPA::all();
+        $wisudawan = WisudawanTPA::orderby('tahun_wisuda', 'desc')->get();
         return view('component.adminPage.tpa_darulIstiqamah.wisudawan.index', compact('wisudawan'));
     }
 
