@@ -10,6 +10,6 @@ class DaftarSantriTahfidz extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama', 'alamat', 'tanggal_lahir', 'gambar',
+        'nama', 'alamat', 'tanggal_lahir', 'jenis_kelamin', 'gambar',
     ];
 }

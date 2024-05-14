@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('wisudawan_t_p_a_s', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('jenis_kelamin');
+            $table->enum('jenis_kelamin', ['L', 'P']);
             $table->string('tahun_wisuda');
             $table->timestamps();
         });

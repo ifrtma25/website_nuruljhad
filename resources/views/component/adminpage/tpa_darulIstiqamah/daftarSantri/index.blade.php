@@ -53,6 +53,7 @@
                                             <th scope="col">Nama</th>
                                             <th scope="col">Alamat</th>
                                             <th scope="col">Tanggal Lahir</th>
+                                            <th scope="col">Jenis Kelamin</th>
                                             <th scope="col">Gambar</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -64,6 +65,7 @@
                                                 <td>{{ $item->nama }}</td>
                                                 <td>{{ $item->alamat }}</td>
                                                 <td>{{ $item->tanggal_lahir }}</td>
+                                                <td>{{ $item->jenis_kelamin }}</td>
                                                 <td><img src="{{ asset('storage/' . $item->gambar) }}" alt=""
                                                         width="150px">
                                                 </td>

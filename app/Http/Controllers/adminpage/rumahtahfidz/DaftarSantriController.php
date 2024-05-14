@@ -26,6 +26,7 @@ class DaftarSantriController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'tanggal_lahir' => 'required',
+            'jenis_kelamin' => 'required',
             'gambar' => 'required',
         ]);
 
@@ -37,6 +38,7 @@ class DaftarSantriController extends Controller
             'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),
             'tanggal_lahir' => $request->input('tanggal_lahir'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
             'gambar' => $file,
         ]);
 
@@ -69,6 +71,7 @@ class DaftarSantriController extends Controller
             'nama' => $request->input('nama'),
             'alamat' => $request->input('alamat'),
             'tanggal_lahir' => $request->input('tanggal_lahir'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
             'gambar' => $file,
         ]);
 

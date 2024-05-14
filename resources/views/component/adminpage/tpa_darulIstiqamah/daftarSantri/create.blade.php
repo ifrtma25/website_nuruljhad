@@ -59,6 +59,14 @@
                                                 name="tanggal_lahir" placeholder="Tanggal lahir">
                                         </div>
                                         <div class="form-group">
+                                            <label for="jenis_kelamin">Jenis Kelamin</label>
+                                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                                                <option selected>Jenis Kelamin</option>
+                                                <option value="L">Laki-Laki</option>
+                                                <option value="P">Perempuan</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="gambar">Gambar</label>
                                             <input type="file" class="form-control" id="gambar" name="gambar">
                                         </div>

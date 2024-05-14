@@ -46,7 +46,7 @@ class KegiatanController extends Controller
     public function edit(Request $request, $id)
     {
         $kegiatan = KegiatanNuruljihad::where('id', $id)->first();
-        return view('component.adminpage.nurulJihad.kegiatan.update', compact('kegiatannuruljihad'));
+        return view('component.adminpage.nurulJihad.kegiatan.update', compact('kegiatan'));
     }
 
     public function update(Request $request, $id)
